@@ -3,173 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Demo de tienda online con WooCommerce para vender productos y gestionarlos desde un panel propio.">
+  <meta name="description" content="Demo de tienda online con WooCommerce inspirada en una home ecommerce editorial y comercial.">
   <title>Nativa Store | Demo WooCommerce</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="container nav nav-multi">
-      <a href="demo.html" class="brand">Nativa Store</a>
-      <nav class="site-links" aria-label="Principal">
-        <a href="demo.html" class="active">Inicio</a>
-        <a href="catalogo.html">Catalogo</a>
-        <a href="contacto.html">Gestion</a>
-      </nav>
-      <a href="../../../pedido.html?plan=WooCommerce&rubro=Tienda%20online&demo=Nativa%20Store" class="button">Quiero esta tienda</a>
+    <div class="container utility-bar">
+      <a href="demo.html" class="brand-lockup"><span class="brand-mark">N</span><span class="brand-text"><strong>NATIVA</strong><small>shopping</small></span></a>
+      <div class="search-chip">Search</div>
+      <div class="utility-links"><a href="catalogo.html">Colecciones</a><a href="contacto.html">Contacto</a><a href="../../../pedido.html?plan=WooCommerce&rubro=Tienda%20online&demo=Nativa%20Store">Checkout</a></div>
     </div>
+    <div class="store-nav"><div class="container store-nav-inner"><a href="catalogo.html" class="category-trigger">Select category</a><nav class="menu-links" aria-label="Principal"><a href="demo.html" class="active">Home</a><a href="catalogo.html">Women</a><a href="catalogo.html">Men</a><a href="catalogo.html">Accessories</a><a href="contacto.html">Contact</a></nav></div></div>
   </header>
 
   <main>
-    <section class="hero hero-home">
-      <div class="container hero-grid hero-grid-home">
-        <div class="hero-copy">
-          <span class="eyebrow">Demo de tienda online con WooCommerce</span>
-          <h1>Una tienda clara, premium y lista para vender desde el primer vistazo.</h1>
-          <p class="lead">
-            Esta propuesta muestra una tienda online autogestionable con una estética limpia, foco en producto,
-            recorrido simple y base lista para WooCommerce, pagos, envios y actualizacion de catalogo.
-          </p>
-          <div class="hero-actions">
-            <a href="catalogo.html" class="button">Ver catalogo</a>
-            <a href="contacto.html" class="button button-secondary">Ver gestion</a>
-          </div>
-          <div class="stats-row">
-            <article class="metric-card">
-              <strong>Autogestion total</strong>
-              <span>Productos, stock, precios y ofertas desde el panel.</span>
-            </article>
-            <article class="metric-card">
-              <strong>Experiencia premium</strong>
-              <span>Visual limpio para marcas que quieren vender con valor percibido.</span>
-            </article>
-            <article class="metric-card">
-              <strong>Base escalable</strong>
-              <span>Lista para sumar pagos, envios y mas categorias.</span>
-            </article>
-          </div>
+    <section class="hero-campaign">
+      <div class="container hero-campaign-grid">
+        <div class="campaign-copy">
+          <span class="offer-badge"><strong>50%</strong><small>off selected products</small></span>
+          <p class="eyebrow">New season</p>
+          <h1>Summer collections built to sell better online.</h1>
+          <p class="lead">Una home ecommerce con visual de campaña, foco en colecciones, banners promocionales y una estructura lista para WooCommerce, stock, cupones y pagos.</p>
+          <div class="hero-actions"><a href="catalogo.html" class="button">Go to collection</a><a href="contacto.html" class="button button-secondary">Gestion WooCommerce</a></div>
         </div>
-
-        <aside class="device-stage">
-          <div class="device-shell">
-            <div class="device-topbar">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="screen-card hero-product-card">
-              <p class="mini-kicker">Coleccion destacada</p>
-              <h2>Objects for calmer spaces.</h2>
-              <p>Home decor, velas y piezas con una presentacion limpia, foco en producto y CTA claros.</p>
-              <div class="hero-product-art"></div>
-            </div>
-            <div class="floating-note note-left">
-              <span>WooCommerce</span>
-              <strong>48 productos activos</strong>
-              <small>Categorias, stock y precios editables.</small>
-            </div>
-            <div class="floating-note note-right">
-              <span>Conversion</span>
-              <strong>Checkout listo</strong>
-              <small>Base preparada para pagos y envios.</small>
-            </div>
-          </div>
-        </aside>
+        <div class="campaign-visual"><div class="hero-model"></div></div>
       </div>
     </section>
 
-    <section class="section section-soft">
-      <div class="container">
-        <div class="section-heading narrow-heading">
-          <span class="section-tag">Que resuelve</span>
-          <h2>La marca puede vender online y seguir moviendo su tienda sin depender de cambios manuales.</h2>
-        </div>
-        <div class="feature-grid feature-grid-three">
-          <article class="feature-card">
-            <span class="feature-number">01</span>
-            <h3>Productos administrables</h3>
-            <p>Alta, baja y edicion de productos, imagenes, descripciones, atributos y precios desde WooCommerce.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-number">02</span>
-            <h3>Colecciones y categorias</h3>
-            <p>La tienda puede ordenar lanzamientos, packs, novedades y destacados sin rehacer la web.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-number">03</span>
-            <h3>Promociones y stock</h3>
-            <p>Cupones, rebajas, productos agotados y destacados visibles dentro de un recorrido comercial prolijo.</p>
-          </article>
-        </div>
+    <section class="promo-strip-section">
+      <div class="container promo-strip">
+        <article class="promo-tile promo-tile-one"><span>Summer</span><strong>Collection offer</strong><a href="catalogo.html">Go to collection</a></article>
+        <article class="promo-tile promo-tile-two"><span>Watch edit</span><strong>Accessories</strong><a href="catalogo.html">View edit</a></article>
+        <article class="promo-tile promo-tile-three"><span>Fashion</span><strong>Minimal release</strong><a href="catalogo.html">Shop now</a></article>
       </div>
     </section>
 
     <section class="section">
-      <div class="container story-grid">
-        <div class="story-copy panel panel-large">
-          <span class="section-tag">Recorrido comercial</span>
-          <h2>Una home pensada para mostrar producto, generar confianza y empujar la compra.</h2>
-          <p>
-            El diseño mezcla imagen de marca, bloques amplios, jerarquía clara y llamadas a la acción discretas.
-            La idea es que la experiencia se vea premium, pero siga siendo simple de recorrer en mobile y desktop.
-          </p>
-          <div class="pill-row">
-            <span class="info-pill">Hero con propuesta clara</span>
-            <span class="info-pill">Destacados editables</span>
-            <span class="info-pill">CTA directos</span>
-            <span class="info-pill">Confianza visual</span>
-          </div>
-        </div>
-        <div class="story-cards">
-          <article class="showcase-card dark-card">
-            <span class="mini-label">Nuevo ingreso</span>
-            <h3>Linea Sierra</h3>
-            <p>Piezas destacadas desde el admin para empujar novedades y lanzamientos.</p>
-          </article>
-          <article class="showcase-card light-card">
-            <span class="mini-label">Bundles</span>
-            <h3>Packs armados para subir ticket</h3>
-            <p>Productos relacionados, sets y colecciones visibles en una estructura clara.</p>
-          </article>
-          <article class="showcase-card soft-card wide-card">
-            <span class="mini-label">Operacion diaria</span>
-            <h3>WooCommerce como motor de autogestion real</h3>
-            <p>La tienda actualiza stock, precios, categorias y promos sin tocar el codigo del sitio.</p>
-          </article>
-        </div>
+      <div class="container section-heading section-heading-center"><span class="section-tag">Shop by category</span><h2>Una tienda pensada para vender con una estructura visual clara.</h2><p>La marca puede destacar colecciones, empujar promociones y ordenar productos desde WooCommerce sin perder coherencia visual.</p></div>
+      <div class="container category-grid">
+        <article class="category-card category-card-one"><div class="category-copy"><span>Women</span><h3>Editorial looks</h3></div></article>
+        <article class="category-card category-card-two"><div class="category-copy"><span>Men</span><h3>Daily essentials</h3></div></article>
+        <article class="category-card category-card-three"><div class="category-copy"><span>Accessories</span><h3>Small upgrades</h3></div></article>
+        <article class="category-card category-card-four"><div class="category-copy"><span>New arrivals</span><h3>Fresh campaign</h3></div></article>
       </div>
     </section>
 
-    <section class="section section-soft">
-      <div class="container">
-        <div class="section-heading narrow-heading">
-          <span class="section-tag">Integraciones</span>
-          <h2>Todo preparado para una tienda moderna y administrable.</h2>
-        </div>
-        <div class="integration-grid">
-          <article class="integration-card"><strong>WooCommerce</strong><span>Catalogo, variaciones, stock y destacados.</span></article>
-          <article class="integration-card"><strong>Pasarela de pago</strong><span>Mercado Pago o integracion equivalente.</span></article>
-          <article class="integration-card"><strong>Envios</strong><span>Zonas, retiro local o tarifas por pedido.</span></article>
-          <article class="integration-card"><strong>Soporte comercial</strong><span>WhatsApp y CTA rapidos para asistencia.</span></article>
-        </div>
+    <section class="section section-ink">
+      <div class="container feature-band">
+        <article class="feature-band-card"><strong>WooCommerce</strong><span>Productos, stock, talles y precios administrables.</span></article>
+        <article class="feature-band-card"><strong>Promos</strong><span>Banners, cupones y ofertas visibles dentro del recorrido.</span></article>
+        <article class="feature-band-card"><strong>Conversion</strong><span>Hero de campaña, categorías, destacados y CTA comerciales.</span></article>
       </div>
     </section>
 
     <section class="section">
-      <div class="container cta-panel cta-panel-wide">
-        <span class="section-tag">Siguiente paso</span>
-        <h2>Explora el catalogo demo y revisa como se muestra la parte operativa para el cliente.</h2>
-        <div class="hero-actions">
-          <a href="catalogo.html" class="button">Ir al catalogo</a>
-          <a href="contacto.html" class="button button-secondary">Ver pagina de gestion</a>
-        </div>
-      </div>
+      <div class="container cta-panel cta-panel-store"><span class="section-tag">Siguiente paso</span><h2>Explora el catalogo demo y revisa como se muestra la parte operativa para el cliente.</h2><div class="hero-actions"><a href="catalogo.html" class="button">Ver catalogo</a><a href="contacto.html" class="button button-secondary">Ver gestion</a></div></div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-copy">Demo WooCommerce de tienda online - Nativa Store.</div>
-  </footer>
+  <footer class="footer"><div class="container footer-copy">Demo WooCommerce de tienda online - Nativa Store.</div></footer>
 </body>
 </html>

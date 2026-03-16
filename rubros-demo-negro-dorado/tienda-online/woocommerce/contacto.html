@@ -3,103 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pagina de gestion y contacto para una tienda online con WooCommerce.">
+  <meta name="description" content="Pagina de gestion y contacto para una tienda online con WooCommerce inspirada en una estética fashion store.">
   <title>Nativa Store | Gestion</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="container nav nav-multi">
-      <a href="demo.html" class="brand">Nativa Store</a>
-      <nav class="site-links" aria-label="Principal">
-        <a href="demo.html">Inicio</a>
-        <a href="catalogo.html">Catalogo</a>
-        <a href="contacto.html" class="active">Gestion</a>
-      </nav>
-      <a href="#formulario" class="button">Pedir propuesta</a>
+    <div class="container utility-bar">
+      <a href="demo.html" class="brand-lockup"><span class="brand-mark">N</span><span class="brand-text"><strong>NATIVA</strong><small>shopping</small></span></a>
+      <div class="search-chip">Search</div>
+      <div class="utility-links"><a href="demo.html">Home</a><a href="catalogo.html">Catalogo</a><a href="#formulario">Contacto</a></div>
     </div>
+    <div class="store-nav"><div class="container store-nav-inner"><a href="catalogo.html" class="category-trigger">Store setup</a><nav class="menu-links" aria-label="Principal"><a href="demo.html">Home</a><a href="catalogo.html">Catalogo</a><a href="contacto.html" class="active">Gestion</a></nav></div></div>
   </header>
 
   <main>
-    <section class="hero inner-hero contact-hero">
-      <div class="container story-grid story-grid-tight align-center">
+    <section class="catalog-hero contact-hero">
+      <div class="container catalog-shell">
         <div>
-          <span class="eyebrow">Operacion y autogestion</span>
-          <h1>Una tienda que se publica una vez y despues sigue creciendo desde el panel.</h1>
-          <p class="lead">Esta pagina muestra como se presenta la parte operativa: soporte, autogestion, confianza y cierre comercial para una propuesta ecommerce.</p>
+          <p class="eyebrow">Store setup</p>
+          <h1>Una tienda con estética de campaña y control real desde WooCommerce.</h1>
+          <p class="lead">Esta página muestra cómo se presenta la parte operativa: soporte, autogestión, confianza y cierre comercial para una propuesta ecommerce más seria.</p>
         </div>
-        <div class="panel panel-contrast">
-          <span class="mini-label">Incluye base ecommerce</span>
-          <strong>WooCommerce, pagos, envios y capacitacion inicial</strong>
-          <p>Ideal para marcas que necesitan vender online y actualizar productos con frecuencia.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft compact-top">
-      <div class="container stats-grid stats-grid-clean">
-        <article class="stat-card clean-stat">
-          <strong>Panel simple</strong>
-          <span>Productos, stock, precios y cupones desde una interfaz conocida y clara.</span>
-        </article>
-        <article class="stat-card clean-stat">
-          <strong>Negocio independiente</strong>
-          <span>La tienda puede publicar novedades sin esperar cambios manuales sobre el sitio.</span>
-        </article>
+        <div class="catalog-side-card dark-side"><span>Incluye</span><strong>Base ecommerce, pagos, envios y capacitación inicial.</strong><p>Ideal para marcas que necesitan subir productos con frecuencia.</p></div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container story-grid story-grid-tight">
-        <div class="panel panel-large">
-          <span class="section-tag">Que incluye</span>
-          <h2>Una propuesta de ecommerce va mas alla del diseño visual.</h2>
-          <div class="admin-list">
-            <span>Configuracion inicial de catalogo</span>
-            <span>Estructura para categorias y fichas</span>
-            <span>Base para pagos y envios</span>
-            <span>Capacitacion para cargar productos</span>
-            <span>CTA a WhatsApp y soporte</span>
-          </div>
-        </div>
-        <div class="panel panel-muted">
-          <span class="section-tag">Ideal para</span>
-          <h2>Marcas de deco, indumentaria, regalos, cosmetica o tiendas con catalogo propio.</h2>
-          <p>Si el negocio necesita vender online y mover productos seguido, esta opcion resuelve mucho mejor que una web solo institucional.</p>
-        </div>
+      <div class="container feature-band feature-band-light">
+        <article class="feature-band-card light-band"><strong>Panel simple</strong><span>Productos, stock y promociones desde una interfaz conocida.</span></article>
+        <article class="feature-band-card light-band"><strong>Negocio independiente</strong><span>La marca puede lanzar campañas sin pedir cambios al desarrollador.</span></article>
+        <article class="feature-band-card light-band"><strong>Escalable</strong><span>Lista para más categorías, promos y nuevas colecciones.</span></article>
       </div>
     </section>
 
     <section class="section section-soft" id="formulario">
-      <div class="container contact-shell contact-shell-wide">
-        <div class="contact-grid contact-grid-wide">
+      <div class="container contact-shell store-contact-shell">
+        <div class="contact-grid store-contact-grid">
           <div>
             <span class="section-tag">Contacto</span>
             <h2>Solicita una tienda online como esta para tu marca.</h2>
-            <p>La idea de esta pagina es cerrar la demo mostrando soporte, confianza y un pedido claro para ecommerce.</p>
+            <p>La idea es cerrar la demo mostrando una propuesta clara para ecommerce: imagen fuerte, estructura comercial y autogestión real.</p>
+            <div class="admin-list"><span>Configuracion inicial de catalogo</span><span>Base para pagos y envios</span><span>Productos y categorias</span><span>CTA comerciales</span></div>
           </div>
           <form class="contact-form" id="contactForm" action="https://formspree.io/f/xyknevep" method="POST" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Nombre</label>
-                <input type="text" id="name" name="name" placeholder="Tu nombre" autocomplete="name" required>
-                <small class="error-message"></small>
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="tu@email.com" autocomplete="email" required>
-                <small class="error-message"></small>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="message">Mensaje</label>
-              <textarea id="message" name="message" rows="6" placeholder="Quiero una tienda online con WooCommerce para vender mis productos y poder cargarlos yo mismo" required></textarea>
-              <input type="hidden" name="_subject" value="Consulta demo WooCommerce | PAGINARG">
-              <small class="error-message"></small>
-            </div>
+            <div class="form-row"><div class="form-group"><label for="name">Nombre</label><input type="text" id="name" name="name" placeholder="Tu nombre" autocomplete="name" required><small class="error-message"></small></div><div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="tu@email.com" autocomplete="email" required><small class="error-message"></small></div></div>
+            <div class="form-group"><label for="message">Mensaje</label><textarea id="message" name="message" rows="6" placeholder="Quiero una tienda online con WooCommerce y una estética más comercial para vender mis productos" required></textarea><input type="hidden" name="_subject" value="Consulta demo WooCommerce | PAGINARG"><small class="error-message"></small></div>
             <button type="submit" class="button">Enviar</button>
             <p class="form-status" id="formStatus" aria-live="polite"></p>
           </form>
@@ -108,9 +60,7 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-copy">Demo WooCommerce de tienda online - Gestion.</div>
-  </footer>
+  <footer class="footer"><div class="container footer-copy">Demo WooCommerce de tienda online - Gestion.</div></footer>
   <script src="script.js"></script>
 </body>
 </html>
