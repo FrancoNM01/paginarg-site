@@ -666,3 +666,28 @@ textarea.invalid { border-color: #d85c5c; }
     width: 100%;
   }
 }
+
+/* Force neutral CTA default state */
+.button,
+.button-secondary {
+  background: #ffffff !important;
+  color: #111111 !important;
+  border: 1px solid var(--line-strong) !important;
+  box-shadow: none !important;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: #111111 !important;
+  color: #ffffff !important;
+  border-color: #111111 !important;
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.14) !important;
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  background: var(--accent-strong) !important;
+  color: #0d0d0d !important;
+  border-color: var(--accent-strong) !important;
+  box-shadow: 0 16px 30px rgba(30, 198, 215, 0.28) !important;
+}
