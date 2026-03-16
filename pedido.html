@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar propuesta web | PAGINARG</title>
+  <meta
+    name="description"
+    content="Solicita una propuesta web en PAGINARG. Elige tu demo, tu plan y comparte los datos de tu negocio para recibir una pagina web profesional."
+  >
+  <meta name="robots" content="noindex,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#090909">
+  <meta name="author" content="PAGINARG">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="PAGINARG">
+  <meta property="og:title" content="Solicitar propuesta web | PAGINARG">
+  <meta property="og:description" content="Completa tus datos y solicita una propuesta web profesional para tu negocio.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Solicitar propuesta web | PAGINARG">
+  <meta name="twitter:description" content="Comparte los datos de tu negocio y recibe una propuesta web alineada a tu marca.">
+  <link rel="canonical" href="https://www.paginarg.com/pedido.html">
+  <meta property="og:url" content="https://www.paginarg.com/pedido.html">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Solicitar propuesta web",
+      "description": "Formulario de contacto para solicitar una propuesta de pagina web en PAGINARG.",
+      "inLanguage": "es"
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="order-page">
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a href="index.html" class="brand">PAGINARG</a>
+      <a class="nav-cta" href="index.html#catalogo">Volver al catalogo</a>
+    </div>
+  </header>
+
+  <main class="order-hero">
+    <div class="container order-grid">
+      <section class="order-copy">
+        <span class="section-tag">Solicitar propuesta</span>
+        <h1>Solicita una propuesta web para tu negocio con la demo y el plan que prefieras.</h1>
+        <p class="hero-text">
+          Si ya elegiste una demo y un plan, completa este formulario para que podamos preparar una propuesta web alineada a tu marca,
+          a tus servicios y al estilo visual de tu negocio.
+        </p>
+
+        <div class="summary-grid">
+          <span class="summary-chip">Simple</span>
+          <span class="summary-chip">Clara</span>
+          <span class="summary-chip">Profesional</span>
+        </div>
+
+        <div class="order-card">
+          <span class="section-tag">Que puedes indicarnos</span>
+          <ul class="summary-list">
+            <li>Tu rubro y la demo que te gusto.</li>
+            <li>La ciudad o zona donde trabajas.</li>
+            <li>Los servicios que quieres destacar.</li>
+            <li>El estilo visual que mejor representa tu marca.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="order-card">
+        <div class="order-summary">
+          <span class="section-tag">Resumen</span>
+          <h2>Tu seleccion</h2>
+        </div>
+
+        <div class="summary-box">
+          <div class="summary-line"><span>Plan</span><span id="summaryPlan">Sin definir</span></div>
+          <div class="summary-line"><span>Rubro</span><span id="summaryRubro">Sin definir</span></div>
+          <div class="summary-line"><span>Demo</span><span id="summaryDemo">Sin definir</span></div>
+          <div class="summary-line"><span>Precio base</span><span id="summaryPrice">A definir</span></div>
+          <div class="summary-line"><span>Entrega estimada</span><span id="summaryTime">A definir</span></div>
+        </div>
+
+        <form id="orderForm" novalidate>
+          <div class="field-grid">
+            <div class="field-group">
+              <label for="plan">Plan</label>
+              <select id="plan" required>
+                <option value="">Seleccionar</option>
+                <option value="Basico">Basico</option>
+                <option value="Profesional">Profesional</option>
+                <option value="Premium">Premium</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label for="rubro">Rubro</label>
+              <select id="rubro" required>
+                <option value="">Seleccionar</option>
+                <option value="Restaurante">Restaurante</option>
+                <option value="Gimnasio">Gimnasio</option>
+                <option value="Estudio juridico">Estudio juridico</option>
+                <option value="Inmobiliaria">Inmobiliaria</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="demo">Demo elegida</label>
+            <input id="demo" type="text" placeholder="Ej: Casa Brasa" required>
+          </div>
+
+          <div class="field-grid">
+            <div class="field-group">
+              <label for="businessName">Nombre del negocio</label>
+              <input id="businessName" type="text" placeholder="Ej: Brava Estudio" required>
+            </div>
+            <div class="field-group">
+              <label for="city">Ciudad o zona</label>
+              <input id="city" type="text" placeholder="Ej: Rosario Centro" required>
+            </div>
+          </div>
+
+          <div class="field-grid">
+            <div class="field-group">
+              <label for="contactName">Nombre de contacto</label>
+              <input id="contactName" type="text" placeholder="Tu nombre">
+            </div>
+            <div class="field-group">
+              <label for="whatsapp">WhatsApp</label>
+              <input id="whatsapp" type="tel" placeholder="+54 9 ...">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="services">Servicios, productos o propuesta</label>
+            <textarea id="services" placeholder="Cuentanos que hace tu negocio, que quieres destacar y cual es el objetivo principal de la web."></textarea>
+          </div>
+
+          <div class="field-grid">
+            <div class="field-group">
+              <label for="colors">Colores, estilo o referencias visuales</label>
+              <input id="colors" type="text" placeholder="Ej: sobrio, elegante, negro y dorado">
+            </div>
+            <div class="field-group">
+              <label for="references">Referencias que te gusten</label>
+              <input id="references" type="text" placeholder="Links, Instagram o nombres">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="extras">Necesidades adicionales</label>
+            <textarea id="extras" placeholder="Puedes indicar si te interesa sumar contenido adicional, secciones extra o integraciones."></textarea>
+          </div>
+
+          <button class="button button-primary" type="submit">Enviar solicitud</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
