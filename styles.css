@@ -892,3 +892,26 @@ h3 {
     justify-content: flex-start;
   }
 }
+#catalogo .section-heading-row h2 {
+  max-width: 18ch;
+  margin-right: 1rem;
+}
+
+@media (min-width: 1081px) {
+  #catalogo .section-heading-row > div:first-child {
+    min-width: 620px;
+  }
+}
+
+@media (max-width: 1080px) {
+  #catalogo .section-heading-row h2 {
+    max-width: 14ch;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  #catalogo .section-heading-row h2 {
+    max-width: none;
+  }
+}
