@@ -1,0 +1,81 @@
+﻿const form = document.getElementById("contactForm");
+const statusMessage = document.getElementById("formStatus");
+
+if (form && statusMessage) {
+  const fields = [
+    { id: "name", validate: (value) => value.trim().length >= 2, message: "Ingresa tu nombre." },
+    { id: "email", validate: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()), message: "Ingresa un email válido." },
+    { id: "message", validate: (value) => value.trim().length >= 12, message: "Escribe un mensaje de al menos 12 caracteres." }
+  ];
+
+  const updateFieldState = (input, valid, message = "") => {
+    const errorElement = input.parentElement.querySelector(".error-message");
+    input.classList.toggle("invalid", !valid);
+    if (errorElement) {
+      errorElement.textContent = message;
+    }
+  };
+
+  const validateField = (field) => {
+    const input = document.getElementById(field.id);
+    const valid = field.validate(input.value);
+    updateFieldState(input, valid, valid ? "" : field.message);
+    return valid;
+  };
+
+  fields.forEach((field) => {
+    const input = document.getElementById(field.id);
+    input.addEventListener("blur", () => validateField(field));
+    input.addEventListener("input", () => {
+      if (input.classList.contains("invalid")) {
+        validateField(field);
+      }
+    });
+  });
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const isValid = fields.every(validateField);
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    if (!isValid) {
+      statusMessage.textContent = "Corrige los campos marcados antes de enviar el formulario.";
+      statusMessage.style.color = "#ff9393";
+      return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Enviando...";
+    statusMessage.textContent = "Enviando mensaje...";
+    statusMessage.style.color = "#c9c2b6";
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error("Error al enviar.");
+      }
+
+      statusMessage.textContent = "Mensaje enviado correctamente. Te responderemos pronto.";
+      statusMessage.style.color = "#63d7ad";
+      form.reset();
+
+      fields.forEach((field) => {
+        updateFieldState(document.getElementById(field.id), true, "");
+      });
+    } catch (error) {
+      statusMessage.textContent = "No se pudo enviar el mensaje. Inténtalo nuevamente.";
+      statusMessage.style.color = "#ff9393";
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = "Enviar";
+    }
+  });
+}
