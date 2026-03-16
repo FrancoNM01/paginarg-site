@@ -1,4 +1,4 @@
-﻿const filters = document.querySelectorAll(".filter");
+const filters = document.querySelectorAll(".filter");
 const demoCards = document.querySelectorAll(".demo-card");
 const visibleCount = document.getElementById("visibleCount");
 const rubroButtons = document.querySelectorAll("[data-filter-rubro]");
@@ -85,6 +85,7 @@ if (orderForm) {
     Basico: { price: "USD 220", time: "3 a 5 dias" },
     Profesional: { price: "USD 420", time: "5 a 7 dias" },
     Premium: { price: "USD 760", time: "7 a 10 dias" },
+    WooCommerce: { price: "USD 980", time: "10 a 14 dias" },
   };
 
   Object.entries(prefills).forEach(([key, value]) => {
@@ -134,4 +135,3 @@ if (orderForm) {
     window.open(whatsappUrl, "_blank", "noopener");
   });
 }
-
