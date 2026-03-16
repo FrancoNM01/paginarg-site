@@ -130,7 +130,8 @@ if (orderForm) {
       `Extras de interes: ${fields.extras.value || "Sin definir"}`,
     ];
 
-    const whatsappUrl = `https://wa.me/5491155555555?text=${encodeURIComponent(messageLines.join("\n"))}`;
+    const whatsappUrl = `https://wa.me/543517714398?text=${encodeURIComponent(messageLines.join("\n"))}`;
     window.open(whatsappUrl, "_blank", "noopener");
   });
 }
+
