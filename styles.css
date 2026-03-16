@@ -861,3 +861,34 @@ h3 {
   color: rgba(255, 255, 255, 0.62);
 }
 
+
+#catalogo .section-heading-row {
+  max-width: none;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+#catalogo .section-heading-row > div:first-child {
+  max-width: 760px;
+}
+
+#catalogo .filters {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#catalogo .catalog-copy {
+  max-width: 840px;
+  margin: 0 0 1.5rem;
+}
+
+@media (max-width: 1080px) {
+  #catalogo .section-heading-row {
+    grid-template-columns: 1fr;
+  }
+
+  #catalogo .filters {
+    justify-content: flex-start;
+  }
+}
