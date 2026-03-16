@@ -77,3 +77,15 @@ Ese tema replica la direccion estetica de la demo ecommerce actual y sirve como 
 
 Cuando quieras, el siguiente trabajo logico es que yo te deje tambien una guia de tema base para que esta tienda real se parezca a la demo de PAGINARG y no a un WordPress generico.
 
+
+## Alternativa sin Docker
+
+Si no tenes Docker Desktop, usa esta guia con LocalWP:
+
+- `LOCALWP-GUIA.md`
+
+## Alternativa recomendada si ya tenes Studio
+
+Si ya tenes WordPress Studio instalado, usa esta guia:
+
+- `WORDPRESS-STUDIO-GUIA.md`
