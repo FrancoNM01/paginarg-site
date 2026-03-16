@@ -498,3 +498,100 @@ textarea.invalid { border-color: #d85c5c; }
     height: 420px;
   }
 }
+.catalog-hero-compact {
+  padding: 2.8rem 0 3.2rem;
+}
+
+.catalog-shell-compact {
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  align-items: center;
+}
+
+.catalog-hero-compact h1 {
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+  max-width: 10ch;
+}
+
+.button,
+.button-secondary,
+.category-trigger,
+.menu-links a,
+.utility-links a,
+.cart-panel a,
+.account-links a {
+  transition: transform var(--transition), background-color var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  color: #0d0d0d;
+  box-shadow: 0 16px 30px rgba(30, 198, 215, 0.28);
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.14);
+}
+
+.category-trigger:hover,
+.category-trigger:focus-visible,
+.menu-links a:hover,
+.menu-links a:focus-visible,
+.utility-links a:hover,
+.utility-links a:focus-visible,
+.cart-panel a:hover,
+.cart-panel a:focus-visible,
+.account-links a:hover,
+.account-links a:focus-visible {
+  color: var(--accent-strong);
+}
+
+.menu-links-store a:hover,
+.menu-links-store a:focus-visible,
+.menu-links-store a.active {
+  background: rgba(88, 217, 230, 0.14);
+  color: #fff;
+}
+
+@media (max-width: 760px) {
+  .catalog-hero-compact h1 {
+    max-width: none;
+    font-size: clamp(2.4rem, 10vw, 3.6rem);
+  }
+}
+.paginarg-return {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  padding: 0.8rem 1.05rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.04);
+  color: inherit;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+.paginarg-return:hover,
+.paginarg-return:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.14);
+  border-color: rgba(255,255,255,0.28);
+}
+
+@media (max-width: 720px) {
+  .paginarg-return {
+    display: inline-flex;
+    margin-top: 0.9rem;
+    margin-left: 0;
+  }
+}

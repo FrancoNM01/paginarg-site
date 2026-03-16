@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --bg: #130908;
   --text: #f5f1ea;
   --muted: #d7c2b6;
@@ -77,3 +77,35 @@ input.invalid, textarea.invalid { border-color: var(--danger); }
 
 
 
+
+.paginarg-return {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  padding: 0.8rem 1.05rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.04);
+  color: inherit;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+.paginarg-return:hover,
+.paginarg-return:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.14);
+  border-color: rgba(255,255,255,0.28);
+}
+
+@media (max-width: 720px) {
+  .paginarg-return {
+    display: inline-flex;
+    margin-top: 0.9rem;
+    margin-left: 0;
+  }
+}

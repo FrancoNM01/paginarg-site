@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Catalogo demo para una tienda online con WooCommerce y estética editorial de ecommerce fashion.">
+  <meta name="description" content="Catalogo demo para una tienda online con WooCommerce y estetica editorial de ecommerce fashion.">
   <title>Nativa Store | Catalogo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,18 +11,53 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container utility-bar">
-      <a href="demo.html" class="brand-lockup"><span class="brand-mark">N</span><span class="brand-text"><strong>NATIVA</strong><small>shopping</small></span></a>
-      <div class="search-chip">Search</div>
-      <div class="utility-links"><a href="demo.html">Home</a><a href="contacto.html">Contacto</a><a href="../../../pedido.html?plan=WooCommerce&rubro=Tienda%20online&demo=Nativa%20Store">Checkout</a></div>
+  <header class="site-header store-header">
+    <div class="container utility-bar utility-bar-store">
+      <a href="demo.html" class="brand-lockup">
+        <span class="brand-mark">N</span>
+        <span class="brand-text"><strong>NATIVA</strong><small>shopping</small></span>
+      </a>
+      <div class="utility-search">Search</div>
+      <div class="utility-icons">
+        <a href="catalogo.html">f</a>
+        <a href="catalogo.html">t</a>
+        <a href="catalogo.html">g+</a>
+      </div>
+      <div class="utility-currency">USD</div>
+      <div class="cart-panel">
+        <a href="catalogo.html">Shopping cart (3)</a>
+        <a href="../../../pedido.html?plan=WooCommerce&rubro=Tienda%20online&demo=Nativa%20Store">Checkout</a>
+      </div>
     </div>
-    <div class="store-nav"><div class="container store-nav-inner"><a href="catalogo.html" class="category-trigger">Select category</a><nav class="menu-links" aria-label="Principal"><a href="demo.html">Home</a><a href="catalogo.html" class="active">Catalogo</a><a href="contacto.html">Gestion</a></nav></div></div>
+    <div class="store-nav store-nav-store">
+      <div class="container store-nav-inner store-nav-inner-store">
+        <a href="catalogo.html" class="category-trigger">Select category</a>
+        <nav class="menu-links menu-links-store" aria-label="Principal">
+          <a href="demo.html">Home</a>
+          <a href="catalogo.html" class="active">Catalogo</a>
+          <a href="catalogo.html">Women</a>
+          <a href="catalogo.html">Men</a>
+          <a href="contacto.html">Gestion</a>
+        </nav>
+        <div class="account-links">
+          <a href="contacto.html">Login</a>
+          <span>-or-</span>
+          <a href="contacto.html">Register</a>
+        </div>
+      </div>
+    </div>
+    <div class="announcement-bar">
+      <div class="container announcement-inner">
+        <strong>50%</strong>
+        <span>off selected products</span>
+        <em>Catalog demo</em>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section class="catalog-hero">
-      <div class="container catalog-shell">
+    <section class="catalog-hero catalog-hero-compact">
+      <div class="container catalog-shell catalog-shell-compact">
         <div>
           <p class="eyebrow">Catalog overview</p>
           <h1>Shop the collection.</h1>
@@ -35,23 +70,23 @@
     <section class="section">
       <div class="container filter-pills"><span>Women</span><span>Men</span><span>Accessories</span><span>New arrivals</span></div>
       <div class="container product-grid product-grid-store">
-        <article class="product-card store-product"><div class="product-art art-one"></div><span class="mini-label">New</span><h3>Striped knit</h3><p>Producto con precio, stock, descripción y fotos editables.</p><div class="product-meta"><strong>$89</strong><span>Sizes available</span></div></article>
+        <article class="product-card store-product"><div class="product-art art-one"></div><span class="mini-label">New</span><h3>Striped knit</h3><p>Producto con precio, stock, descripcion y fotos editables.</p><div class="product-meta"><strong>$89</strong><span>Sizes available</span></div></article>
         <article class="product-card store-product"><div class="product-art art-two"></div><span class="mini-label">Best seller</span><h3>Classic watch</h3><p>Accesorio destacado para empujar ticket promedio.</p><div class="product-meta"><strong>$120</strong><span>Featured</span></div></article>
-        <article class="product-card store-product"><div class="product-art art-three"></div><span class="mini-label">Promo</span><h3>Soft jacket</h3><p>Precio promocional y categoría visible desde el grid.</p><div class="product-meta"><strong>$140</strong><span>Sale</span></div></article>
-        <article class="product-card store-product"><div class="product-art art-four"></div><span class="mini-label">Bundle</span><h3>Summer set</h3><p>Pack listo para campañas y descuentos especiales.</p><div class="product-meta"><strong>$170</strong><span>Pack</span></div></article>
+        <article class="product-card store-product"><div class="product-art art-three"></div><span class="mini-label">Promo</span><h3>Soft jacket</h3><p>Precio promocional y categoria visible desde el grid.</p><div class="product-meta"><strong>$140</strong><span>Sale</span></div></article>
+        <article class="product-card store-product"><div class="product-art art-four"></div><span class="mini-label">Bundle</span><h3>Summer set</h3><p>Pack listo para campanas y descuentos especiales.</p><div class="product-meta"><strong>$170</strong><span>Pack</span></div></article>
         <article class="product-card store-product"><div class="product-art art-five"></div><span class="mini-label">Limited</span><h3>Mono shirt</h3><p>Producto con etiquetas destacadas y control de stock.</p><div class="product-meta"><strong>$76</strong><span>Limited</span></div></article>
-        <article class="product-card store-product"><div class="product-art art-six"></div><span class="mini-label">Gift</span><h3>Gift card</h3><p>Ideal para campañas rápidas o productos digitales.</p><div class="product-meta"><strong>$50</strong><span>Digital</span></div></article>
+        <article class="product-card store-product"><div class="product-art art-six"></div><span class="mini-label">Gift</span><h3>Gift card</h3><p>Ideal para campanas rapidas o productos digitales.</p><div class="product-meta"><strong>$50</strong><span>Digital</span></div></article>
       </div>
     </section>
 
     <section class="section section-soft">
       <div class="container story-grid story-grid-tight">
-        <div class="panel panel-store"><span class="section-tag">Gestion real</span><h2>Desde WooCommerce el cliente puede mover todo este catalogo sin perder la estética.</h2><div class="admin-list"><span>Crear productos nuevos</span><span>Editar precios y stock</span><span>Activar ofertas</span><span>Ordenar categorias</span><span>Marcar destacados</span><span>Configurar variantes</span></div></div>
-        <div class="panel panel-store-dark"><span class="section-tag">Comercial</span><h2>La grilla no solo se ve bien: empuja la compra.</h2><p>La prioridad está en imagen, campaña, claridad y recorrido directo al producto o checkout.</p><a href="contacto.html" class="button">Ver gestion</a></div>
+        <div class="panel panel-store"><span class="section-tag">Gestion real</span><h2>Desde WooCommerce el cliente puede mover todo este catalogo sin perder la estetica.</h2><div class="admin-list"><span>Crear productos nuevos</span><span>Editar precios y stock</span><span>Activar ofertas</span><span>Ordenar categorias</span><span>Marcar destacados</span><span>Configurar variantes</span></div></div>
+        <div class="panel panel-store-dark"><span class="section-tag">Comercial</span><h2>La grilla no solo se ve bien: empuja la compra.</h2><p>La prioridad esta en imagen, campana, claridad y recorrido directo al producto o checkout.</p><a href="contacto.html" class="button">Ver gestion</a></div>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><div class="container footer-copy">Demo WooCommerce de tienda online - Catalogo.</div></footer>
+  <footer class="footer"><div class="container footer-copy">Demo WooCommerce de tienda online - Catalogo. <a class="paginarg-return" href="../../../index.html#catalogo">Ver mas demos en PAGINARG</a></div></footer>
 </body>
 </html>
