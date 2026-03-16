@@ -7,16 +7,119 @@
   <title>Nativa Store | Catalogo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header"><div class="container nav nav-multi"><a href="demo.html" class="brand">Nativa Store</a><nav class="site-links" aria-label="Principal"><a href="demo.html">Inicio</a><a href="catalogo.html" class="active">Catalogo</a><a href="contacto.html">Gestion</a></nav><a href="../../../pedido.html?plan=WooCommerce&rubro=Tienda%20online&demo=Nativa%20Store" class="button">Solicitar esta demo</a></div></header>
+  <header class="site-header">
+    <div class="container nav nav-multi">
+      <a href="demo.html" class="brand">Nativa Store</a>
+      <nav class="site-links" aria-label="Principal">
+        <a href="demo.html">Inicio</a>
+        <a href="catalogo.html" class="active">Catalogo</a>
+        <a href="contacto.html">Gestion</a>
+      </nav>
+      <a href="../../../pedido.html?plan=WooCommerce&rubro=Tienda%20online&demo=Nativa%20Store" class="button">Solicitar esta demo</a>
+    </div>
+  </header>
+
   <main>
-    <section class="hero inner-hero"><div class="container"><span class="eyebrow">Catalogo demo</span><h1>Un catalogo que se puede actualizar desde WooCommerce sin rehacer la web.</h1><p>Las categorias, los precios, los destacados y el stock pueden editarse desde el panel para mantener la tienda viva.</p></div></section>
-    <section class="section"><div class="container"><div class="category-row"><span class="info-pill">Home decor</span><span class="info-pill">Velas</span><span class="info-pill">Textiles</span><span class="info-pill">Kits regalo</span></div><div class="product-grid"><article class="product-card"><div class="product-art art-one"></div><span class="mini-label">Nuevo</span><h3>Kit Ritual Calma</h3><p>Set con vela, spray textil y ceramica. Ideal para packs destacados y bundles.</p><div class="product-meta"><strong>$48.000</strong><span>Stock visible</span></div></article><article class="product-card"><div class="product-art art-two"></div><span class="mini-label">Top ventas</span><h3>Vela Mineral 320g</h3><p>Ficha de producto con aroma, materiales, tiempo de uso y recomendaciones.</p><div class="product-meta"><strong>$26.500</strong><span>Variantes</span></div></article><article class="product-card"><div class="product-art art-three"></div><span class="mini-label">Coleccion</span><h3>Manta Arena</h3><p>Producto con medidas, fotos, stock y etiqueta de promocion administrable.</p><div class="product-meta"><strong>$39.900</strong><span>Oferta activa</span></div></article><article class="product-card"><div class="product-art art-four"></div><span class="mini-label">Pack</span><h3>Set Mesa Serena</h3><p>Packs configurables con precio especial y CTA fuerte para elevar ticket.</p><div class="product-meta"><strong>$72.000</strong><span>Bundle</span></div></article><article class="product-card"><div class="product-art art-five"></div><span class="mini-label">Edicion limitada</span><h3>Difusor Bosque</h3><p>Producto marcado como limitado, destacado desde el panel y visible en home.</p><div class="product-meta"><strong>$31.800</strong><span>Destacado</span></div></article><article class="product-card"><div class="product-art art-six"></div><span class="mini-label">Regalo</span><h3>Gift Card Digital</h3><p>Ideal para sumar productos virtuales, promociones y ventas rapidas por fechas especiales.</p><div class="product-meta"><strong>$20.000</strong><span>Producto virtual</span></div></article></div></div></section>
-    <section class="section section-alt"><div class="container split-grid compact-split"><div class="content-panel"><span class="section-tag">Gestion real</span><h2>Que puede editar el cliente desde el panel</h2><div class="admin-list"><span>Crear productos nuevos</span><span>Editar precios y stock</span><span>Organizar categorias</span><span>Activar descuentos</span><span>Destacar lanzamientos</span><span>Configurar atributos y variantes</span></div></div><div class="content-panel admin-side"><span class="section-tag">Pensado para conversion</span><h2>El catalogo no solo se ve bien: tambien ordena la venta.</h2><p>Los productos pueden mostrarse por categoria, coleccion, ofertas o destacados para que el recorrido sea claro y comercial.</p><a href="contacto.html" class="button">Ver pagina de gestion</a></div></div></section>
+    <section class="hero inner-hero catalog-hero">
+      <div class="container catalog-hero-grid">
+        <div>
+          <span class="eyebrow">Catalogo demo</span>
+          <h1>Un catalogo pensado para que el producto tenga todo el protagonismo.</h1>
+          <p class="lead">Categorias visibles, tarjetas limpias, foco en imagen y estructura lista para actualizar desde WooCommerce sin romper la experiencia.</p>
+        </div>
+        <div class="catalog-summary panel">
+          <span class="mini-label">Panel administrable</span>
+          <strong>Productos, stock, precios y etiquetas</strong>
+          <p>Todo se puede mover desde WooCommerce para que la tienda siga creciendo sin rehacer la web.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft compact-top">
+      <div class="container">
+        <div class="pill-row compact-pills">
+          <span class="info-pill">Home decor</span>
+          <span class="info-pill">Velas</span>
+          <span class="info-pill">Textiles</span>
+          <span class="info-pill">Kits regalo</span>
+        </div>
+        <div class="product-grid product-grid-premium">
+          <article class="product-card premium-card">
+            <div class="product-art art-one"></div>
+            <span class="mini-label">Nuevo</span>
+            <h3>Kit Ritual Calma</h3>
+            <p>Set con vela, spray textil y ceramica. Ideal para bundles destacados.</p>
+            <div class="product-meta"><strong>$48.000</strong><span>Stock visible</span></div>
+          </article>
+          <article class="product-card premium-card">
+            <div class="product-art art-two"></div>
+            <span class="mini-label">Top ventas</span>
+            <h3>Vela Mineral 320g</h3>
+            <p>Ficha con aroma, materiales, tiempo de uso y beneficios del producto.</p>
+            <div class="product-meta"><strong>$26.500</strong><span>Variantes</span></div>
+          </article>
+          <article class="product-card premium-card">
+            <div class="product-art art-three"></div>
+            <span class="mini-label">Coleccion</span>
+            <h3>Manta Arena</h3>
+            <p>Producto con fotos, medidas, stock y etiqueta de promocion visible.</p>
+            <div class="product-meta"><strong>$39.900</strong><span>Oferta activa</span></div>
+          </article>
+          <article class="product-card premium-card">
+            <div class="product-art art-four"></div>
+            <span class="mini-label">Pack</span>
+            <h3>Set Mesa Serena</h3>
+            <p>Packs configurables para elevar ticket y ordenar mejor la propuesta.</p>
+            <div class="product-meta"><strong>$72.000</strong><span>Bundle</span></div>
+          </article>
+          <article class="product-card premium-card">
+            <div class="product-art art-five"></div>
+            <span class="mini-label">Edicion limitada</span>
+            <h3>Difusor Bosque</h3>
+            <p>Producto destacado desde el panel para empujar lanzamientos o campañas.</p>
+            <div class="product-meta"><strong>$31.800</strong><span>Destacado</span></div>
+          </article>
+          <article class="product-card premium-card">
+            <div class="product-art art-six"></div>
+            <span class="mini-label">Digital</span>
+            <h3>Gift Card Digital</h3>
+            <p>Ideal para productos virtuales, promociones estacionales y ventas rapidas.</p>
+            <div class="product-meta"><strong>$20.000</strong><span>Virtual</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container story-grid story-grid-tight">
+        <div class="panel panel-large">
+          <span class="section-tag">Gestion real</span>
+          <h2>El cliente puede mantener vivo el catalogo sin perder consistencia visual.</h2>
+          <div class="admin-list">
+            <span>Crear productos nuevos</span>
+            <span>Editar precios y stock</span>
+            <span>Organizar categorias</span>
+            <span>Activar descuentos</span>
+            <span>Destacar lanzamientos</span>
+            <span>Configurar atributos y variantes</span>
+          </div>
+        </div>
+        <div class="panel panel-contrast">
+          <span class="section-tag">Pensado para conversion</span>
+          <h2>El catalogo no solo se ve bien: tambien ordena la venta.</h2>
+          <p>Los productos se pueden mostrar por categoria, coleccion, ofertas o destacados para que el recorrido sea claro, elegante y comercial.</p>
+          <a href="contacto.html" class="button">Ver pagina de gestion</a>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="footer"><div class="container footer-copy">Demo WooCommerce de tienda online - Catalogo.</div></footer>
+
+  <footer class="footer">
+    <div class="container footer-copy">Demo WooCommerce de tienda online - Catalogo.</div>
+  </footer>
 </body>
 </html>
