@@ -854,3 +854,10 @@ h3 {
   margin-top: 0.9rem;
 }
 
+
+.copyright {
+  margin-top: 0.9rem;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.62);
+}
+
