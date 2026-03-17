@@ -125,18 +125,18 @@ $slider_products = class_exists('WooCommerce') ? wc_get_products(array(
     <div class="container cta-panel cta-panel-rich">
         <div class="cta-copy">
             <span class="section-tag">Siguiente paso</span>
-            <h2>Explorá el catálogo real y revisá cómo se muestra la parte operativa para el cliente.</h2>
-            <p>Esta demo ya combina productos, categor?as, carrito, checkout, cuenta, contacto y una estructura visual lista para presentar una tienda real en WooCommerce.</p>
+            <h2>Explorá una tienda real en funcionamiento y mirá cómo conviven catálogo, carrito, checkout y gestión del cliente dentro de un recorrido comercial listo para presentar.</h2>
+            <p>Esta versión ya reúne catálogo administrable, categorías, cuenta, contacto comercial y flujo de compra completo, con una base visual preparada para adaptarse a una marca real sin rehacer toda la estructura.</p>
         </div>
         <div class="cta-notes">
-            <div class="cta-note"><strong>Lo que ya incluye</strong><span>Catálogo, carrito, checkout, categorías y gestión básica dentro de WordPress.</span></div>
-            <div class="cta-note"><strong>Lo que podés seguir ajustando</strong><span>Identidad visual, banners, fichas de producto, medios de pago, envíos y automatizaciones.</span></div>
-            <a href="file:///C:/Users/franc/Documents/GitHub/paginarg-site/index.html#catalogo" class="cta-note cta-note-highlight cta-note-link" target="_blank" rel="noreferrer"><strong>Volver a PAGINARG</strong><span>Revisá otras demos y compará más opciones visuales desde la web principal.</span></a>
+            <div class="cta-note"><strong>Base operativa ya resuelta</strong><span>Catálogo, carrito, checkout, categorías, cuenta de cliente y administración básica dentro de WordPress y WooCommerce.</span></div>
+            <div class="cta-note"><strong>Todo lo que todavía podés personalizar</strong><span>Identidad visual, banners, fichas de producto, medios de pago, envíos, automatizaciones y tono comercial de cada sección.</span></div>
+            <a href="https://franconm01.github.io/paginarg-site/index.html#hero" class="cta-note cta-note-highlight cta-note-link"><strong>Volver a PAGINARG</strong><span>Abrí un centro local de demos para seguir comparando recorridos, secciones y accesos sin salir de WordPress Studio.</span></a>
         </div>
         <div class="hero-actions cta-actions-wide">
             <a href="<?php echo esc_url(paginarg_store_shop_url()); ?>" class="button">Ver catálogo</a>
             <a href="<?php echo esc_url(paginarg_store_account_url()); ?>" class="button-secondary">Ver gestión</a>
-            <a href="file:///C:/Users/franc/Documents/GitHub/paginarg-site/index.html#catalogo" class="button-secondary paginarg-return" target="_blank" rel="noreferrer">Volver a PAGINARG</a>
+            <a href="https://franconm01.github.io/paginarg-site/index.html#hero" class="button-secondary paginarg-return">Volver a PAGINARG</a>
         </div>
     </div>
 </section>

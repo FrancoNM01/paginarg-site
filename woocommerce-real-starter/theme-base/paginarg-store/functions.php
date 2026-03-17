@@ -54,6 +54,33 @@ function paginarg_store_page_url_by_slug($slugs, $fallback = '') {
     return $fallback ? $fallback : home_url('/');
 }
 
+
+function paginarg_store_demo_hub_url() {
+    return add_query_arg('paginarg_view', 'demos', home_url('/'));
+}
+
+add_action('template_redirect', 'paginarg_store_render_demo_hub');
+function paginarg_store_render_demo_hub() {
+    if (is_admin()) {
+        return;
+    }
+
+    $view = isset($_GET['paginarg_view']) ? sanitize_text_field(wp_unslash($_GET['paginarg_view'])) : '';
+    if ('demos' !== $view) {
+        return;
+    }
+
+    $template = get_stylesheet_directory() . '/paginarg-local-hub.php';
+    if (!file_exists($template)) {
+        return;
+    }
+
+    status_header(200);
+    nocache_headers();
+    include $template;
+    exit;
+}
+
 function paginarg_store_get_product_category_link($slug) {
     $shop_url = paginarg_store_shop_url();
 

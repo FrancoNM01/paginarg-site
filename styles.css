@@ -915,3 +915,36 @@ h3 {
     max-width: none;
   }
 }
+
+.catalog-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 1.5rem;
+  flex-wrap: wrap;
+}
+
+.catalog-reset {
+  margin-top: 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.catalog-reset:hover,
+.catalog-reset:focus-visible,
+.rubro-card .chip.active {
+  border-color: rgba(255, 255, 255, 0.32);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.08));
+  color: var(--gold-strong);
+}
+
+@media (max-width: 760px) {
+  .catalog-toolbar {
+    align-items: stretch;
+  }
+
+  .catalog-reset {
+    width: 100%;
+  }
+}

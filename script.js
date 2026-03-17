@@ -1,7 +1,42 @@
 const filters = document.querySelectorAll(".filter");
 const demoCards = document.querySelectorAll(".demo-card");
 const visibleCount = document.getElementById("visibleCount");
+const catalogContext = document.getElementById("catalogContext");
+const resetRubroFilter = document.getElementById("resetRubroFilter");
 const rubroButtons = document.querySelectorAll("[data-filter-rubro]");
+const rubroLabels = {
+  restaurante: "Restaurante",
+  gimnasio: "Gimnasio",
+  "estudio-juridico": "Estudio jurídico",
+  inmobiliaria: "Inmobiliaria",
+  "tienda-online": "Tienda online",
+};
+const defaultCatalogContext = "con rubro, plan, precio estimado y acceso directo a cada ejemplo.";
+
+const setActiveRubroButtons = (activeRubro = "all") => {
+  rubroButtons.forEach((button) => {
+    button.classList.toggle("active", activeRubro !== "all" && button.dataset.filterRubro === activeRubro);
+  });
+};
+
+const updateCatalogContext = (count, rubroFilter = "all") => {
+  if (visibleCount) {
+    visibleCount.textContent = String(count);
+  }
+
+  if (catalogContext) {
+    if (rubroFilter === "all") {
+      catalogContext.textContent = defaultCatalogContext;
+    } else {
+      const label = rubroLabels[rubroFilter] || "este rubro";
+      catalogContext.textContent = `para ${label}, con plan, precio estimado y acceso directo a cada ejemplo.`;
+    }
+  }
+
+  if (resetRubroFilter) {
+    resetRubroFilter.hidden = rubroFilter === "all";
+  }
+};
 
 const applyFilters = (planFilter = "all", rubroFilter = "all") => {
   let count = 0;
@@ -20,9 +55,8 @@ const applyFilters = (planFilter = "all", rubroFilter = "all") => {
     }
   });
 
-  if (visibleCount) {
-    visibleCount.textContent = String(count);
-  }
+  updateCatalogContext(count, rubroFilter);
+  setActiveRubroButtons(rubroFilter);
 };
 
 if (filters.length) {
@@ -33,6 +67,10 @@ if (filters.length) {
     button.addEventListener("click", () => {
       activePlan = button.dataset.filterGroup;
 
+      if (activePlan === "all") {
+        activeRubro = "all";
+      }
+
       filters.forEach((item) => item.classList.remove("active"));
       button.classList.add("active");
 
@@ -42,10 +80,15 @@ if (filters.length) {
 
   rubroButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      activeRubro = button.dataset.filterRubro;
+      activeRubro = activeRubro === button.dataset.filterRubro ? "all" : button.dataset.filterRubro;
       document.getElementById("catalogo")?.scrollIntoView({ behavior: "smooth", block: "start" });
       applyFilters(activePlan, activeRubro);
     });
+  });
+
+  resetRubroFilter?.addEventListener("click", () => {
+    activeRubro = "all";
+    applyFilters(activePlan, activeRubro);
   });
 
   applyFilters(activePlan, activeRubro);
