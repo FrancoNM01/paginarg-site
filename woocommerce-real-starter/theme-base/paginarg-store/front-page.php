@@ -5,7 +5,19 @@ if (!defined('ABSPATH')) {
 
 get_header();
 
-$contact_url = paginarg_store_page_url_by_slug(array('contacto', 'contact'), paginarg_store_account_url());
+$contact_url = paginarg_store_page_url_by_slug(array('contacto', 'contact'), home_url('/contacto/'));
+$featured_products = class_exists('WooCommerce') ? wc_get_products(array(
+    'status' => 'publish',
+    'limit' => 4,
+    'orderby' => 'date',
+    'order' => 'DESC',
+)) : array();
+$slider_products = class_exists('WooCommerce') ? wc_get_products(array(
+    'status' => 'publish',
+    'limit' => 5,
+    'orderby' => 'date',
+    'order' => 'DESC',
+)) : array();
 ?>
 <section class="hero-campaign">
     <div class="container hero-campaign-grid">
@@ -13,10 +25,10 @@ $contact_url = paginarg_store_page_url_by_slug(array('contacto', 'contact'), pag
             <p class="eyebrow">Summer collection</p>
             <h1>Summer collections built to sell better online.</h1>
             <div class="hero-tagline">Coolest collection of the season is here</div>
-            <p class="lead">Una home ecommerce con visual de campana, foco en colecciones, banners promocionales y una estructura lista para WooCommerce, stock, cupones y pagos.</p>
+            <p class="lead">Una home ecommerce con visual de campaña, foco en colecciones, banners promocionales y una estructura lista para WooCommerce, stock, cupones y pagos.</p>
             <div class="hero-actions">
                 <a href="<?php echo esc_url(paginarg_store_get_product_category_link('women')); ?>" class="button">Go to collection</a>
-                <a href="<?php echo esc_url($contact_url); ?>" class="button-secondary">Gestion WooCommerce</a>
+                <a href="<?php echo esc_url($contact_url); ?>" class="button-secondary">Gestión WooCommerce</a>
             </div>
         </div>
         <div class="campaign-visual">
@@ -24,6 +36,45 @@ $contact_url = paginarg_store_page_url_by_slug(array('contacto', 'contact'), pag
         </div>
     </div>
 </section>
+
+<?php if (!empty($slider_products)) : ?>
+<section class="section section-runway">
+    <div class="container runway-shell" data-runway>
+        <div class="runway-head">
+            <span class="section-tag">Colección destacada</span>
+            <h2>Un banner amplio que rota productos reales y empuja la compra desde la home.</h2>
+            <p>Cada slide puede llevar al producto, mostrar una categoría y darle más presencia a la tienda desde el primer scroll.</p>
+        </div>
+        <div class="runway-stage">
+            <?php foreach ($slider_products as $index => $shop_product) : ?>
+                <?php
+                $product_url = get_permalink($shop_product->get_id());
+                $product_image = paginarg_store_get_product_image_url($shop_product);
+                $product_kicker = paginarg_store_get_product_kicker($shop_product);
+                ?>
+                <article class="runway-slide<?php echo 0 === $index ? ' is-active' : ''; ?>" data-runway-slide style="background-image: linear-gradient(90deg, rgba(7, 7, 7, 0.62), rgba(7, 7, 7, 0.08)), url('<?php echo esc_url($product_image); ?>');">
+                    <div class="runway-slide-copy">
+                        <span class="mini-label"><?php echo esc_html($product_kicker); ?></span>
+                        <h3><?php echo esc_html($shop_product->get_name()); ?></h3>
+                        <p><?php echo esc_html(wp_trim_words(wp_strip_all_tags($shop_product->get_short_description() ? $shop_product->get_short_description() : $shop_product->get_description()), 18)); ?></p>
+                        <div class="runway-slide-actions">
+                            <a href="<?php echo esc_url($product_url); ?>" class="button">Ver producto</a>
+                            <a href="<?php echo esc_url(paginarg_store_shop_url()); ?>" class="button-secondary button-secondary-light">Ir al catálogo</a>
+                        </div>
+                    </div>
+                </article>
+            <?php endforeach; ?>
+        </div>
+        <div class="runway-nav" aria-label="Selector de productos destacados">
+            <?php foreach ($slider_products as $index => $shop_product) : ?>
+                <button type="button" class="runway-dot<?php echo 0 === $index ? ' is-active' : ''; ?>" data-runway-dot data-index="<?php echo esc_attr($index); ?>">
+                    <span><?php echo esc_html($shop_product->get_name()); ?></span>
+                </button>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+<?php endif; ?>
 
 <section class="promo-strip-section">
     <div class="container promo-strip">
@@ -43,15 +94,50 @@ $contact_url = paginarg_store_page_url_by_slug(array('contacto', 'contact'), pag
     </div>
 </section>
 
+<?php if (!empty($featured_products)) : ?>
+<section class="section section-soft">
+    <div class="container section-heading"><span class="section-tag">Featured products</span><h2>Productos reales cargados en WooCommerce para que la demo se sienta completa.</h2><p>La tienda ya muestra piezas, categorías y precios dentro de un recorrido más cercano a una marca real.</p></div>
+    <div class="container woocommerce paginarg-featured-products">
+        <ul class="products columns-4">
+            <?php foreach ($featured_products as $shop_product) : ?>
+                <?php
+                $GLOBALS['product'] = $shop_product;
+                $GLOBALS['post'] = get_post($shop_product->get_id());
+                setup_postdata($GLOBALS['post']);
+                wc_get_template_part('content', 'product');
+                ?>
+            <?php endforeach; ?>
+        </ul>
+        <?php wp_reset_postdata(); ?>
+    </div>
+</section>
+<?php endif; ?>
+
 <section class="section section-ink">
     <div class="container feature-band">
         <article class="feature-band-card"><strong>WooCommerce</strong><span>Productos, stock, talles y precios administrables.</span></article>
         <article class="feature-band-card"><strong>Promos</strong><span>Banners, cupones y ofertas visibles dentro del recorrido.</span></article>
-        <article class="feature-band-card"><strong>Conversion</strong><span>Hero de campana, categorias, destacados y CTA comerciales.</span></article>
+        <article class="feature-band-card"><strong>Conversión</strong><span>Hero de campaña, categorías, destacados y CTA comerciales.</span></article>
     </div>
 </section>
 
 <section class="section">
-    <div class="container cta-panel"><span class="section-tag">Siguiente paso</span><h2>Explora el catalogo real y revisa como se muestra la parte operativa para el cliente.</h2><div class="hero-actions"><a href="<?php echo esc_url(paginarg_store_shop_url()); ?>" class="button">Ver catalogo</a><a href="<?php echo esc_url(paginarg_store_account_url()); ?>" class="button-secondary">Ver gestion</a></div></div>
+    <div class="container cta-panel cta-panel-rich">
+        <div class="cta-copy">
+            <span class="section-tag">Siguiente paso</span>
+            <h2>Explorá el catálogo real y revisá cómo se muestra la parte operativa para el cliente.</h2>
+            <p>Esta demo ya combina productos, categor?as, carrito, checkout, cuenta, contacto y una estructura visual lista para presentar una tienda real en WooCommerce.</p>
+        </div>
+        <div class="cta-notes">
+            <div class="cta-note"><strong>Lo que ya incluye</strong><span>Catálogo, carrito, checkout, categorías y gestión básica dentro de WordPress.</span></div>
+            <div class="cta-note"><strong>Lo que podés seguir ajustando</strong><span>Identidad visual, banners, fichas de producto, medios de pago, envíos y automatizaciones.</span></div>
+            <a href="file:///C:/Users/franc/Documents/GitHub/paginarg-site/index.html#catalogo" class="cta-note cta-note-highlight cta-note-link" target="_blank" rel="noreferrer"><strong>Volver a PAGINARG</strong><span>Revisá otras demos y compará más opciones visuales desde la web principal.</span></a>
+        </div>
+        <div class="hero-actions cta-actions-wide">
+            <a href="<?php echo esc_url(paginarg_store_shop_url()); ?>" class="button">Ver catálogo</a>
+            <a href="<?php echo esc_url(paginarg_store_account_url()); ?>" class="button-secondary">Ver gestión</a>
+            <a href="file:///C:/Users/franc/Documents/GitHub/paginarg-site/index.html#catalogo" class="button-secondary paginarg-return" target="_blank" rel="noreferrer">Volver a PAGINARG</a>
+        </div>
+    </div>
 </section>
 <?php get_footer(); ?>

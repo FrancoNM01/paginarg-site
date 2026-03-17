@@ -20,16 +20,21 @@ $contact_url = paginarg_store_page_url_by_slug(array('contacto', 'contact'), hom
             <span class="brand-mark"><?php echo esc_html(substr(wp_strip_all_tags(get_bloginfo('name')), 0, 1)); ?></span>
             <span class="brand-text"><strong><?php bloginfo('name'); ?></strong><small>shopping</small></span>
         </a>
+
         <form role="search" method="get" class="utility-search-form" action="<?php echo esc_url(home_url('/')); ?>">
+            <span class="search-chip">Search</span>
             <label class="screen-reader-text" for="paginarg-search"><?php esc_html_e('Search', 'paginarg-store'); ?></label>
-            <input id="paginarg-search" class="search-field" type="search" value="<?php echo esc_attr(get_search_query()); ?>" name="s" placeholder="Search">
+            <input id="paginarg-search" class="search-field" type="search" value="<?php echo esc_attr(get_search_query()); ?>" name="s" placeholder="Buscar productos, colecciones o marcas">
         </form>
+
         <div class="utility-icons">
             <a href="<?php echo esc_url(paginarg_store_shop_url()); ?>">Shop</a>
             <a href="<?php echo esc_url(paginarg_store_account_url()); ?>">Account</a>
             <a href="<?php echo esc_url($contact_url); ?>">Contact</a>
         </div>
+
         <div class="utility-currency">ARS</div>
+
         <div class="cart-panel">
             <a href="<?php echo esc_url(paginarg_store_cart_url()); ?>"><?php echo esc_html(sprintf('Shopping cart (%d)', paginarg_store_get_cart_count())); ?></a>
             <a href="<?php echo esc_url(paginarg_store_checkout_url()); ?>">Checkout</a>
@@ -40,9 +45,9 @@ $contact_url = paginarg_store_page_url_by_slug(array('contacto', 'contact'), hom
             <a href="<?php echo esc_url(paginarg_store_shop_url()); ?>" class="category-trigger">Select category</a>
             <nav class="menu-links-store" aria-label="Principal">
                 <a href="<?php echo esc_url(home_url('/')); ?>">Home</a>
-                <a href="<?php echo esc_url(paginarg_store_get_product_category_link('women')); ?>">Women</a>
-                <a href="<?php echo esc_url(paginarg_store_get_product_category_link('men')); ?>">Men</a>
-                <a href="<?php echo esc_url(paginarg_store_get_product_category_link('accessories')); ?>">Accessories</a>
+                <a href="<?php echo esc_url(paginarg_store_get_product_category_link('women')); ?>" class="<?php echo paginarg_store_is_current_category('women') ? 'is-active' : ''; ?>">Women</a>
+                <a href="<?php echo esc_url(paginarg_store_get_product_category_link('men')); ?>" class="<?php echo paginarg_store_is_current_category('men') ? 'is-active' : ''; ?>">Men</a>
+                <a href="<?php echo esc_url(paginarg_store_get_product_category_link('accessories')); ?>" class="<?php echo paginarg_store_is_current_category('accessories') ? 'is-active' : ''; ?>">Accessories</a>
                 <a href="<?php echo esc_url($contact_url); ?>">Contact</a>
             </nav>
             <div class="account-links">
@@ -61,4 +66,3 @@ $contact_url = paginarg_store_page_url_by_slug(array('contacto', 'contact'), hom
     </div>
 </header>
 <main class="site-main">
-
