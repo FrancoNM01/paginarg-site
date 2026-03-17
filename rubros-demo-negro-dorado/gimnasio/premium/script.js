@@ -1,4 +1,4 @@
-﻿const form = document.getElementById("contactForm");
+const form = document.getElementById("contactForm");
 const statusMessage = document.getElementById("formStatus");
 
 if (form && statusMessage) {

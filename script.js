@@ -82,10 +82,10 @@ if (orderForm) {
   const summaryTime = document.getElementById("summaryTime");
 
   const planMeta = {
-    Basico: { price: "USD 220", time: "3 a 5 dias" },
-    Profesional: { price: "USD 420", time: "5 a 7 dias" },
-    Premium: { price: "USD 760", time: "7 a 10 dias" },
-    WooCommerce: { price: "USD 980", time: "10 a 14 dias" },
+    Basico: { price: "USD 220", time: "3 a 5 días" },
+    Profesional: { price: "USD 420", time: "5 a 7 días" },
+    Premium: { price: "USD 760", time: "7 a 10 días" },
+    WooCommerce: { price: "USD 980", time: "10 a 14 días" },
   };
 
   Object.entries(prefills).forEach(([key, value]) => {
@@ -117,7 +117,7 @@ if (orderForm) {
     event.preventDefault();
 
     const messageLines = [
-      "Hola, quiero pedir una pagina web.",
+      "Hola, quiero pedir una página web.",
       `Plan: ${fields.plan.value || "Sin definir"}`,
       `Rubro: ${fields.rubro.value || "Sin definir"}`,
       `Demo elegida: ${fields.demo.value || "Sin definir"}`,
@@ -128,7 +128,7 @@ if (orderForm) {
       `Servicios: ${fields.services.value || "Sin definir"}`,
       `Colores o estilo: ${fields.colors.value || "Sin definir"}`,
       `Referencias: ${fields.references.value || "Sin definir"}`,
-      `Extras de interes: ${fields.extras.value || "Sin definir"}`,
+      `Extras de interés: ${fields.extras.value || "Sin definir"}`,
     ];
 
     const whatsappUrl = `https://wa.me/543517714398?text=${encodeURIComponent(messageLines.join("\n"))}`;
