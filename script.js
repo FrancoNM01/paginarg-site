@@ -1,3 +1,28 @@
+const siteHeader = document.querySelector(".site-header");
+const navToggle = document.querySelector("[data-nav-toggle]");
+const navLinks = document.querySelectorAll(".main-nav a");
+
+if (siteHeader && navToggle) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = siteHeader.classList.toggle("nav-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      siteHeader.classList.remove("nav-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!siteHeader.contains(event.target)) {
+      siteHeader.classList.remove("nav-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
 const filters = document.querySelectorAll(".filter");
 const demoCards = document.querySelectorAll(".demo-card");
 const visibleCount = document.getElementById("visibleCount");

@@ -22,6 +22,8 @@
   <meta name="twitter:description" content="Páginas web y tiendas online profesionales para negocios locales con demos reales y planes claros.">
   <link rel="canonical" href="https://www.paginarg.com/">
   <meta property="og:url" content="https://www.paginarg.com/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -76,23 +78,23 @@
               "name": "Qué necesito para empezar",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Necesitas el nombre de tu negocio, tus servicios principales, tu ciudad y una referencia visual que te guste."
+                "text": "Necesitás el nombre de tu negocio, tus servicios principales, tu ciudad y una referencia de estilo que te guste."
               }
             },
             {
               "@type": "Question",
-              "name": "La web queda lista para mostrar",
+              "name": "Puedo elegir una demo y pedir ajustes",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Si, la propuesta se entrega lista para mostrar una imagen profesional y clara de tu negocio."
+                "text": "Sí. La demo funciona como punto de partida visual y estructural, no como una copia cerrada."
               }
             },
             {
               "@type": "Question",
-              "name": "Puedo elegir un estilo y pedir ajustes",
+              "name": "Qué incluye el precio orientativo",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Si, puedes partir de una demo y adaptarla a la identidad visual y comercial de tu negocio."
+                "text": "Incluye el desarrollo de la web o tienda según el plan elegido. Hosting, dominio, mantenimiento o extras se pueden sumar aparte si hace falta."
               }
             },
             {
@@ -100,7 +102,39 @@
               "name": "Hay opciones más completas",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Si, los planes avanzados incorporan mas secciones, mejor desarrollo visual y un recorrido mas completo."
+                "text": "Sí. Los planes avanzados incorporan más secciones, mejor desarrollo visual y un recorrido comercial más trabajado."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "La web queda lista para publicar",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La idea es que recibas una propuesta clara y una base profesional lista para salir online una vez aprobada."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "También hacen tiendas online",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. WooCommerce es una línea aparte pensada para negocios que quieren cargar productos, categorías y promociones desde su propio panel."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Se puede pagar en etapas",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Eso se puede definir en la propuesta final. La web muestra valores de referencia para ubicar el nivel de trabajo y facilitar la decisión inicial."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qué pasa después de enviar el pedido",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Se revisa tu selección, se ordena la información principal y se arma una propuesta más clara para avanzar con el proyecto."
               }
             }
           ]
@@ -120,11 +154,17 @@
   <header class="site-header">
     <div class="container nav-shell">
       <a href="#hero" class="brand">PAGINARG</a>
-      <nav class="main-nav" aria-label="Principal">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav" data-nav-toggle>
+        <span></span><span></span><span></span>
+        <span class="sr-only">Abrir navegación</span>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="Principal">
         <a href="#rubros">Rubros</a>
         <a href="#catalogo">Demos</a>
         <a href="#planes">Planes</a>
         <a href="#proceso">Proceso</a>
+        <a href="#faq">FAQ</a>
+        <a class="main-nav-cta" href="pedido.html">Solicitar propuesta</a>
       </nav>
       <a class="nav-cta" href="pedido.html">Solicitar propuesta</a>
     </div>
@@ -135,7 +175,7 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">Diseño de páginas web para negocios locales</span>
-          <h1>Páginas web profesionales y tiendas online para negocios que quieren vender mas y verse mejor online.</h1>
+          <h1>Páginas web profesionales y tiendas online para negocios que quieren verse mejor, transmitir confianza y convertir más consultas en ventas.</h1>
           <p class="hero-text">
             Creamos páginas web para restaurantes, gimnasios, estudios jurídicos, inmobiliarias y tiendas online con WooCommerce,
             con ejemplos reales, planes claros y propuestas visuales pensadas para transmitir confianza, destacar tus servicios y facilitar ventas o consultas.
@@ -146,16 +186,16 @@
           </div>
           <div class="hero-stats" aria-label="Indicadores principales">
             <article class="stat-card">
-              <strong>12</strong>
-              <span>ejemplos disponibles</span>
+              <strong>13</strong>
+              <span>demos disponibles</span>
             </article>
             <article class="stat-card">
               <strong>5</strong>
-              <span>rubros destacádos</span>
+              <span>rubros trabajados</span>
             </article>
             <article class="stat-card">
               <strong>4</strong>
-              <span>opciones de servicio</span>
+              <span>niveles de servicio</span>
             </article>
           </div>
         </div>
@@ -164,13 +204,46 @@
           <p class="panel-tag">Páginas web con estructura clara</p>
           <h2>Elige una propuesta visual antes de decidir.</h2>
           <ul class="hero-list">
-            <li>Explora páginas web y tiendas online por rubro.</li>
-            <li>Compara planes y precios orientativos.</li>
-            <li>Solicita una propuesta para tu negocio.</li>
-            <li>Recibe una web o tienda alineada a tu marca.</li>
+            <li>Explorá demos reales por rubro antes de contratar.</li>
+            <li>Compará alcance, tiempos y nivel visual de cada plan.</li>
+            <li>Pedí una propuesta con una base ya pensada para tu negocio.</li>
+            <li>Avanzá con una web o tienda alineada a tu marca y a tu objetivo comercial.</li>
           </ul>
+          <div class="hero-note-grid">
+            <div class="mini-proof"><strong>Propuesta clara</strong><span>Planes con alcance visible y sin necesidad de imaginar el resultado.</span></div>
+            <div class="mini-proof"><strong>Proceso acompañado</strong><span>Desde la selección de la demo hasta la publicación final.</span></div>
+          </div>
           <a class="text-link" href="pedido.html">Quiero pedir mi web</a>
         </aside>
+      </div>
+    </section>
+
+    <section class="section" id="confianza">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-tag">Más claridad para decidir</span>
+          <h2>Una propuesta pensada para que entiendas qué recibís antes de avanzar.</h2>
+          <p>Como PAGINARG todavía está construyendo su portfolio público, la confianza no se apoya en promesas vacías sino en una estructura clara, demos visibles y un proceso comercial fácil de seguir.</p>
+        </div>
+
+        <div class="trust-grid">
+          <article class="trust-card">
+            <strong>Elegís viendo ejemplos</strong>
+            <p>No partís de una hoja en blanco: primero comparás estilos, estructura y nivel de trabajo según tu rubro.</p>
+          </article>
+          <article class="trust-card">
+            <strong>Planes con alcance visible</strong>
+            <p>Cada opción muestra qué nivel de presencia, profundidad y recorrido comercial podés esperar.</p>
+          </article>
+          <article class="trust-card">
+            <strong>Pedido guiado</strong>
+            <p>El formulario ya resume rubro, plan y demo elegida para que la propuesta salga con mejor contexto desde el arranque.</p>
+          </article>
+          <article class="trust-card">
+            <strong>Base lista para adaptar</strong>
+            <p>La idea no es copiar una demo, sino tomar una dirección visual clara y adaptarla a tu identidad comercial.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -194,7 +267,7 @@
           </article>
           <article class="rubro-card">
             <span class="rubro-kicker">Gimnasio</span>
-            <h3>Página web para gimnasío</h3>
+            <h3>P?gina web para gimnasio</h3>
             <p>Una presencia clara para gimnasios, boxes o academias que quieren transmitir energía, autoridad y confianza.</p>
             <button class="chip" type="button" data-filter-rubro="gimnasio">Ver opciones</button>
           </article>
@@ -223,20 +296,20 @@
     <section class="section" id="catalogo">
       <div class="container">
         <div class="section-heading section-heading-row">
-  <div>
-    <span class="section-tag">Catálogo</span>
-    <h2>Demos de páginas web para negocios con estilos reales y planes definidos.</h2>
-  </div>
-  <div class="filters" aria-label="Filtros del catálogo">
-    <button class="filter active" type="button" data-filter-group="all">Todos</button>
-    <button class="filter" type="button" data-filter-group="basico">Básico</button>
-    <button class="filter" type="button" data-filter-group="profesional">Profesional</button>
-    <button class="filter" type="button" data-filter-group="premium">Premium</button>
-    <button class="filter" type="button" data-filter-group="woocommerce">WooCommerce</button>
-  </div>
-</div>
+          <div>
+            <span class="section-tag">Catálogo</span>
+            <h2>Demos de páginas web para negocios con estilos reales y planes definidos.</h2>
+          </div>
+          <div class="filters" aria-label="Filtros del catálogo">
+            <button class="filter active" type="button" data-filter-group="all">Todos</button>
+            <button class="filter" type="button" data-filter-group="basico">Básico</button>
+            <button class="filter" type="button" data-filter-group="profesional">Profesional</button>
+            <button class="filter" type="button" data-filter-group="premium">Premium</button>
+            <button class="filter" type="button" data-filter-group="woocommerce">WooCommerce</button>
+          </div>
+        </div>
 
-<div class="catalog-toolbar">
+        <div class="catalog-toolbar">
           <p class="catalog-copy">
             <span id="visibleCount">13</span> propuestas visibles <span id="catalogContext">con rubro, plan, precio estimado y acceso directo a cada ejemplo.</span>
           </p>
@@ -249,10 +322,10 @@
             <h3>Fuego Sur</h3>
             <p class="demo-plan">Plan Básico</p>
             <p class="demo-meta">Desde USD 220 - Entrega 3 a 5 días</p>
-            <p>Landing one page con menú destacádo, precios visibles y formulario de reservas.</p>
+            <p>Landing one page con menú destacado, precios visibles y formulario de reservas.</p>
             <ul class="demo-list">
               <li>WhatsApp y contacto simple</li>
-              <li>Galeria breve y CTA directo</li>
+              <li>Galería breve y CTA directo</li>
               <li>Publicación incluida</li>
             </ul>
             <div class="card-actions">
@@ -265,10 +338,10 @@
             <h3>Casa Cobre</h3>
             <p class="demo-plan">Plan Profesional</p>
             <p class="demo-meta">Desde USD 420 - Entrega 5 a 7 días</p>
-            <p>Sitio con cinco secciones, propuesta visual mas rica y cierre comercial mas trabajado.</p>
+            <p>Sitio con cinco secciones, propuesta visual más rica y cierre comercial más trabajado.</p>
             <ul class="demo-list">
               <li>SEO local inicial</li>
-              <li>Integracion con redes y WhatsApp</li>
+              <li>Integración con redes y WhatsApp</li>
               <li>Copy comercial mejorado</li>
             </ul>
             <div class="card-actions">
@@ -300,7 +373,7 @@
             <p>Landing clara para mostrar clases, beneficios y un CTA fuerte para clase de prueba.</p>
             <ul class="demo-list">
               <li>One page responsive</li>
-              <li>Mensaje orientado a conversion</li>
+              <li>Mensaje orientado a conversión</li>
               <li>Formulario incluido</li>
             </ul>
             <div class="card-actions">
@@ -313,9 +386,9 @@
             <h3>Forge Athletic Club</h3>
             <p class="demo-plan">Plan Profesional</p>
             <p class="demo-meta">Desde USD 420 - Entrega 5 a 7 días</p>
-            <p>Version con cinco secciones, branding fuerte y canales rápidos de contacto.</p>
+            <p>Versión con cinco secciones, branding fuerte y canales rápidos de contacto.</p>
             <ul class="demo-list">
-              <li>Mas espacio para vender membresias</li>
+              <li>Más espacio para vender membresías</li>
               <li>Estructura por programas</li>
               <li>WhatsApp y redes</li>
             </ul>
@@ -329,7 +402,7 @@
             <h3>Black Forge</h3>
             <p class="demo-plan">Plan Premium</p>
             <p class="demo-meta">Desde USD 760 - Entrega 7 a 10 días</p>
-            <p>Experiencia multipágina premium para academias que quieren una imagen mas potente.</p>
+            <p>Experiencia multipágina premium para academias que quieren una imagen más potente.</p>
             <ul class="demo-list">
               <li>Home con impacto visual</li>
               <li>Páginas internas</li>
@@ -361,7 +434,7 @@
             <h3>Lex Norte</h3>
             <p class="demo-plan">Plan Profesional</p>
             <p class="demo-meta">Desde USD 440 - Entrega 5 a 7 días</p>
-            <p>Version con varias secciones para áreas de practica, metodologia y conversion.</p>
+            <p>Versión con varias secciones para áreas de práctica, metodología y conversión.</p>
             <ul class="demo-list">
               <li>SEO local inicial</li>
               <li>Áreas legales bien ordenadas</li>
@@ -377,10 +450,10 @@
             <h3>Montiel Abogados</h3>
             <p class="demo-plan">Plan Premium</p>
             <p class="demo-meta">Desde USD 790 - Entrega 7 a 10 días</p>
-            <p>Sitio premium para estudios que quieren elevar percepcion, autoridad y presencia.</p>
+            <p>Sitio premium para estudios que quieren elevar percepción, autoridad y presencia.</p>
             <ul class="demo-list">
-              <li>Mas profundidad institucional</li>
-              <li>Páginas internas por practica</li>
+              <li>Más profundidad institucional</li>
+              <li>Páginas internas por práctica</li>
               <li>Branding visual superior</li>
             </ul>
             <div class="card-actions">
@@ -395,7 +468,7 @@
             <p class="demo-meta">Desde USD 240 - Entrega 3 a 5 días</p>
             <p>Landing para captar consultas, mostrar diferenciales y destacar propiedades o zonas.</p>
             <ul class="demo-list">
-              <li>Presentacion simple y efectiva</li>
+              <li>Presentación simple y efectiva</li>
               <li>CTA a visita o consulta</li>
               <li>Publicación incluida</li>
             </ul>
@@ -409,11 +482,11 @@
             <h3>Altura Propiedades</h3>
             <p class="demo-plan">Plan Profesional</p>
             <p class="demo-meta">Desde USD 460 - Entrega 5 a 7 días</p>
-            <p>Sitio con estructura mas robusta para vender reputacion, zonas, servicio y consulta rápida.</p>
+            <p>Sitio con estructura más robusta para vender reputación, zonas, servicio y consulta rápida.</p>
             <ul class="demo-list">
-              <li>Copy orientado a captacion</li>
+              <li>Copy orientado a captación</li>
               <li>SEO local básico</li>
-              <li>Integracion con mapas y WhatsApp</li>
+              <li>Integración con mapas y WhatsApp</li>
             </ul>
             <div class="card-actions">
               <a class="button button-secondary" href="rubros-demo-negro-dorado/inmobiliaria/profesional/profesional.html">Ver demo</a>
@@ -425,9 +498,9 @@
             <h3>Ribera Estates</h3>
             <p class="demo-plan">Plan Premium</p>
             <p class="demo-meta">Desde USD 820 - Entrega 7 a 10 días</p>
-            <p>Version premium para inmobiliarias que buscan una imagen mas exclusiva y refinada.</p>
+            <p>Versión premium para inmobiliarias que buscan una imagen más exclusiva y refinada.</p>
             <ul class="demo-list">
-              <li>Mas marca y mas secciones</li>
+              <li>Más marca y más secciones</li>
               <li>Páginas internas preparadas</li>
               <li>Alto valor percibido</li>
             </ul>
@@ -441,7 +514,7 @@
             <h3>Nativa Store</h3>
             <p class="demo-plan">Plan WooCommerce</p>
             <p class="demo-meta">Desde USD 980 - Entrega 10 a 14 días</p>
-            <p>Tienda online autogestionable para vender productos, administrar stock, categorías, cupones y destacádos desde WooCommerce.</p>
+            <p>Tienda online autogestionable para vender productos, administrar stock, categorías, cupones y destacados desde WooCommerce.</p>
             <ul class="demo-list">
               <li>Catálogo y fichas de producto</li>
               <li>Panel para cargar productos y ofertas</li>
@@ -455,13 +528,42 @@
         </div>
       </div>
     </section>
-
+    <section class="section section-ink" id="woocommerce">
+      <div class="container woo-shell">
+        <div class="woo-copy">
+          <span class="section-tag">WooCommerce real</span>
+          <h2>Una línea pensada para negocios que necesitan vender online y seguir cargando productos por su cuenta.</h2>
+          <p>La propuesta ecommerce de PAGINARG apunta a tiendas que quieren una base visual más cuidada que una plantilla genérica, pero con lógica operativa real para catálogo, categorías, stock, cupones y medios de pago.</p>
+          <div class="woo-points">
+            <span>Catálogo autogestionable</span>
+            <span>Fichas de producto</span>
+            <span>Categorías y destacados</span>
+            <span>Base para pagos y envíos</span>
+            <span>Recorrido comercial claro</span>
+            <span>Capacitación inicial</span>
+          </div>
+        </div>
+        <aside class="woo-panel">
+          <span class="panel-tag">Ideal para</span>
+          <h3>Marcas que quieren una tienda prolija, editable y lista para crecer.</h3>
+          <ul class="hero-list woo-list">
+            <li>Negocios que venden productos físicos o catálogos pequeños y medianos.</li>
+            <li>Marcas que necesitan dejar de depender de un desarrollador para cada cambio.</li>
+            <li>Proyectos que quieren mostrar una demo antes de contratar una tienda real.</li>
+          </ul>
+          <div class="hero-actions woo-actions">
+            <a class="button button-primary" href="rubros-demo-negro-dorado/tienda-online/woocommerce/demo.html">Ver demo WooCommerce</a>
+            <a class="button button-secondary" href="pedido.html?plan=WooCommerce">Pedir esta opción</a>
+          </div>
+        </aside>
+      </div>
+    </section>
     <section class="section section-contrast" id="planes">
       <div class="container">
         <div class="section-heading">
           <span class="section-tag">Elegí tu plan</span>
           <h2>Planes de páginas web y tiendas online con alcance claro y precios orientativos.</h2>
-          <p>Opciónes pensadas para negocios que necesitan una web basíca, una web profesional, un sitio premium o una tienda online autogestionable.</p>
+          <p>Opciones pensadas para negocios que necesitan una base clara para empezar, una presencia más comercial o una tienda online con gestión propia. Los valores funcionan como referencia para ubicar cada nivel de trabajo.</p>
         </div>
 
         <div class="plan-grid">
@@ -473,23 +575,23 @@
               <li>1 página tipo landing</li>
               <li>WhatsApp y formulario simple</li>
               <li>Textos adaptados</li>
-              <li>Galeria basíca</li>
+              <li>Galería básica</li>
               <li>Publicación incluida</li>
             </ul>
-            <a class="button button-secondary plan-button" href="pedido.html?plan=Basico">Elegír Básico</a>
+            <a class="button button-secondary plan-button" href="pedido.html?plan=Basico">Elegir Básico</a>
           </article>
           <article class="plan-card">
             <span class="plan-label">Profesional</span>
             <p class="price">USD 420</p>
-            <p class="plan-summary">La opción ideal para negocios que necesitan una imagen mas fuerte y comercial.</p>
+            <p class="plan-summary">La opción ideal para negocios que necesitan una imagen más fuerte y comercial.</p>
             <ul>
               <li>Hasta 5 secciones</li>
               <li>Copy comercial mejorado</li>
               <li>Testimonios, mapa y FAQ</li>
               <li>SEO básico local</li>
-              <li>Integracion con WhatsApp o redes</li>
+              <li>Integración con WhatsApp o redes</li>
             </ul>
-            <a class="button button-secondary plan-button" href="pedido.html?plan=Profesional">Elegír Profesional</a>
+            <a class="button button-secondary plan-button" href="pedido.html?plan=Profesional">Elegir Profesional</a>
           </article>
           <article class="plan-card">
             <span class="plan-label">Premium</span>
@@ -499,10 +601,10 @@
               <li>Sitio multipágina</li>
               <li>Secciones avanzadas</li>
               <li>Branding visual superior</li>
-              <li>Formularios mas completos</li>
+              <li>Formularios más completos</li>
               <li>Prioridad en entrega</li>
             </ul>
-            <a class="button button-secondary plan-button" href="pedido.html?plan=Premium">Elegír Premium</a>
+            <a class="button button-secondary plan-button" href="pedido.html?plan=Premium">Elegir Premium</a>
           </article>
           <article class="plan-card">
             <span class="plan-label">WooCommerce</span>
@@ -512,23 +614,23 @@
               <li>Catálogo de productos autogestionable</li>
               <li>Fichas de producto y categorías</li>
               <li>Base para pagos, envíos y cupones</li>
-              <li>Panel para stock, destacádos y ofertas</li>
-              <li>Capacitacion inicial de uso</li>
+              <li>Panel para stock, destacados y ofertas</li>
+              <li>Capacitación inicial de uso</li>
             </ul>
-            <a class="button button-secondary plan-button" href="pedido.html?plan=WooCommerce">Elegír WooCommerce</a>
+            <a class="button button-secondary plan-button" href="pedido.html?plan=WooCommerce">Elegir WooCommerce</a>
           </article>
         </div>
 
         <div class="extras-panel">
           <div>
-            <span class="section-tag">Opciónes adicionales</span>
-            <h3>También puedes sumar servicios complementarios.</h3>
+            <span class="section-tag">Opciones adicionales</span>
+            <h3>También podés sumar servicios complementarios si necesitás más soporte o más profundidad.</h3>
           </div>
           <div class="extras-grid">
-            <span>Dominio y configuracion</span>
+            <span>Dominio y configuración</span>
             <span>Mantenimiento mensual</span>
             <span>Cambios adicionales</span>
-            <span>Redaccion de textos</span>
+            <span>Redacción de textos</span>
             <span>SEO local adicional</span>
             <span>Instagram, Maps y formularios</span>
             <span>Tienda online con WooCommerce</span>
@@ -536,45 +638,44 @@
         </div>
       </div>
     </section>
-
     <section class="section" id="proceso">
       <div class="container">
         <div class="section-heading">
-          <span class="section-tag">Como funciona</span>
-          <h2>Proceso simple para contratar una página web profesional.</h2>
+          <span class="section-tag">Cómo funciona</span>
+          <h2>Un proceso simple y claro para pasar de la demo a una propuesta concreta.</h2>
         </div>
 
         <div class="process-grid">
           <article class="process-card">
             <strong>1</strong>
             <h3>Explora</h3>
-            <p>Revisa los ejemplos y detecta cual representa mejor el estilo de tu negocio.</p>
+            <p>Revisá los ejemplos y detectá cuál representa mejor el tono, el nivel visual y la estructura que buscás.</p>
           </article>
           <article class="process-card">
             <strong>2</strong>
             <h3>Selecciona</h3>
-            <p>Elige tu plan y define la opción qué mejor se adapta a lo que necesitas.</p>
+            <p>Elegí tu plan y definí la opción que mejor se adapta al alcance que necesitás.</p>
           </article>
           <article class="process-card">
             <strong>3</strong>
             <h3>Solicita</h3>
-            <p>Enviaños tu pedido con los datos principales para comenzar la propuesta.</p>
+            <p>Envíanos tu pedido con los datos principales para que la propuesta salga con contexto real.</p>
           </article>
           <article class="process-card">
             <strong>4</strong>
             <h3>Revisa</h3>
-            <p>Te compartimos una version adaptada para que puedas verla y aprobarla.</p>
+            <p>Te compartimos una versión orientativa o una propuesta clara para que puedas revisarla y validarla.</p>
           </article>
           <article class="process-card">
             <strong>5</strong>
             <h3>Publica</h3>
-            <p>Una vez aprobada, tu web queda lista para ser compartida con tus clientes.</p>
+            <p>Una vez aprobada, tu web o tienda queda lista para ser publicada y compartida con tus clientes.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-soft">
+    <section class="section section-soft" id="faq">
       <div class="container faq-shell">
         <div class="section-heading">
           <span class="section-tag">Preguntas frecuentes</span>
@@ -587,16 +688,32 @@
             <p>El nombre de tu negocio, tus servicios principales, tu ciudad y una referencia de estilo que te guste.</p>
           </article>
           <article class="faq-card">
-            <h3>La web queda lista para mostrar</h3>
-            <p>Si, la idea es que recibas una propuesta clara, presentada y lista para que tu marca se vea profesional.</p>
+            <h3>Puedo elegir una demo y pedir ajustes</h3>
+            <p>Sí. La demo funciona como punto de partida visual y estructural, no como una copia cerrada.</p>
           </article>
           <article class="faq-card">
-            <h3>Puedo elegir un estilo y pedir ajustes</h3>
-            <p>Si, puedes partir de una demo que te guste y adaptarla a la identidad visual de tu negocio.</p>
+            <h3>Qué incluye el precio orientativo</h3>
+            <p>Incluye el desarrollo de la web o tienda según el plan elegido. Hosting, dominio, mantenimiento o extras se pueden sumar aparte si hace falta.</p>
           </article>
           <article class="faq-card">
             <h3>Hay opciones más completas</h3>
-            <p>Si, los planes avanzados incorporan mas secciones, mejor desarrollo visual y un recorrido mas completo.</p>
+            <p>Sí. Los planes avanzados incorporan más secciones, mejor desarrollo visual y un recorrido comercial más trabajado.</p>
+          </article>
+          <article class="faq-card">
+            <h3>La web queda lista para publicar</h3>
+            <p>La idea es que recibas una propuesta clara y una base profesional lista para salir online una vez aprobada.</p>
+          </article>
+          <article class="faq-card">
+            <h3>También hacen tiendas online</h3>
+            <p>Sí. WooCommerce es una línea aparte pensada para negocios que quieren cargar productos, categorías y promociones desde su propio panel.</p>
+          </article>
+          <article class="faq-card">
+            <h3>Se puede pagar en etapas</h3>
+            <p>Eso se puede definir en la propuesta final. La web muestra valores de referencia para ubicar el nivel de trabajo y facilitar la decisión inicial.</p>
+          </article>
+          <article class="faq-card">
+            <h3>Qué pasa después de enviar el pedido</h3>
+            <p>Se revisa tu selección, se ordena la información principal y se arma una propuesta más clara para avanzar con el proyecto.</p>
           </article>
         </div>
       </div>
@@ -606,9 +723,9 @@
       <div class="container final-shell">
         <div>
           <span class="section-tag">Da el siguiente paso</span>
-          <h2>Si ya encontraste un estilo que te gusta, puedes solicitar tu propuesta ahora mismo.</h2>
+          <h2>Si ya encontraste un estilo que encaja con tu negocio, podés avanzar con una propuesta mucho más clara desde ahora.</h2>
           <p>
-            Elige tu demo favorita, completa el pedido y avanzamos con una página web pensada para mostrar tu negocio con una imagen solida.
+            Elegí tu demo favorita, completá el pedido y avanzamos con una propuesta pensada para darte claridad visual, comercial y técnica antes de publicar.
           </p>
         </div>
         <div class="final-actions">
