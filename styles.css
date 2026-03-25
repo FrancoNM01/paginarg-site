@@ -628,6 +628,41 @@ h3 {
   color: var(--ink);
 }
 
+.field-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 3.25rem;
+  background-color: rgba(18, 18, 18, 0.98);
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgba(246, 239, 227, 0.82) 50%),
+    linear-gradient(135deg, rgba(246, 239, 227, 0.82) 50%, transparent 50%);
+  background-position:
+    calc(100% - 1.35rem) calc(50% - 2px),
+    calc(100% - 0.95rem) calc(50% - 2px);
+  background-size: 8px 8px, 8px 8px;
+  background-repeat: no-repeat;
+  color-scheme: normal;
+}
+
+.field-group select option {
+  background: #ffffff;
+  color: #111111;
+}
+
+.field-group select option:checked,
+.field-group select option:hover,
+.field-group select option:focus {
+  background: #e9ecef;
+  color: #111111;
+}
+
+.field-group select:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+}
+
 .field-group input::placeholder,
 .field-group textarea::placeholder {
   color: rgba(195, 181, 158, 0.66);
