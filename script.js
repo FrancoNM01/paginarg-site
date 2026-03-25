@@ -119,6 +119,113 @@ if (filters.length) {
   applyFilters(activePlan, activeRubro);
 }
 
+const closeCustomSelects = (except = null) => {
+  document.querySelectorAll(".custom-select.is-open").forEach((instance) => {
+    if (instance === except) {
+      return;
+    }
+
+    instance.classList.remove("is-open");
+    instance.querySelector(".custom-select-trigger")?.setAttribute("aria-expanded", "false");
+  });
+};
+
+const enhanceSelect = (select) => {
+  if (!select || select.dataset.customized === "true") {
+    return;
+  }
+
+  select.dataset.customized = "true";
+  select.classList.add("native-select-hidden");
+  select.closest(".field-group")?.classList.add("field-group--select");
+
+  const wrapper = document.createElement("div");
+  wrapper.className = "custom-select";
+
+  const trigger = document.createElement("button");
+  trigger.type = "button";
+  trigger.className = "custom-select-trigger";
+  trigger.setAttribute("aria-haspopup", "listbox");
+  trigger.setAttribute("aria-expanded", "false");
+
+  const value = document.createElement("span");
+  value.className = "custom-select-value";
+
+  const icon = document.createElement("span");
+  icon.className = "custom-select-icon";
+  icon.setAttribute("aria-hidden", "true");
+  icon.textContent = "v";
+
+  trigger.append(value, icon);
+
+  const menu = document.createElement("div");
+  menu.className = "custom-select-menu";
+  menu.setAttribute("role", "listbox");
+  menu.setAttribute("aria-label", select.id);
+
+  wrapper.append(trigger, menu);
+  select.insertAdjacentElement("afterend", wrapper);
+
+  const updateState = () => {
+    const selectedOption = select.options[select.selectedIndex];
+    const selectedText = selectedOption?.textContent.trim() || "Seleccionar";
+    const hasValue = Boolean(select.value);
+
+    value.textContent = selectedText;
+    trigger.classList.toggle("is-placeholder", !hasValue);
+    wrapper.classList.toggle("has-value", hasValue);
+
+    menu.querySelectorAll(".custom-select-option").forEach((optionButton) => {
+      const isSelected = optionButton.dataset.value === select.value;
+      optionButton.classList.toggle("is-selected", isSelected);
+      optionButton.setAttribute("aria-selected", String(isSelected));
+    });
+  };
+
+  Array.from(select.options).forEach((option) => {
+    const optionButton = document.createElement("button");
+    optionButton.type = "button";
+    optionButton.className = "custom-select-option";
+    optionButton.dataset.value = option.value;
+    optionButton.setAttribute("role", "option");
+    optionButton.textContent = option.textContent.trim();
+
+    if (!option.value) {
+      optionButton.classList.add("is-placeholder-option");
+    }
+
+    optionButton.addEventListener("click", () => {
+      select.value = option.value;
+      select.dispatchEvent(new Event("change", { bubbles: true }));
+      closeCustomSelects();
+      trigger.focus();
+    });
+
+    menu.appendChild(optionButton);
+  });
+
+  trigger.addEventListener("click", () => {
+    const shouldOpen = !wrapper.classList.contains("is-open");
+    closeCustomSelects(wrapper);
+    wrapper.classList.toggle("is-open", shouldOpen);
+    trigger.setAttribute("aria-expanded", String(shouldOpen));
+  });
+
+  select.addEventListener("change", updateState);
+  updateState();
+};
+
+document.addEventListener("click", (event) => {
+  const activeSelect = event.target.closest(".custom-select");
+  closeCustomSelects(activeSelect);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeCustomSelects();
+  }
+});
+
 const orderForm = document.getElementById("orderForm");
 
 if (orderForm) {
@@ -156,27 +263,40 @@ if (orderForm) {
     WooCommerce: { price: "USD 980", time: "10 a 14 días" },
   };
 
+  const getFieldText = (field) => {
+    if (!field) {
+      return "Sin definir";
+    }
+
+    if (field.tagName === "SELECT") {
+      return field.options[field.selectedIndex]?.textContent.trim() || "Sin definir";
+    }
+
+    return field.value.trim() || "Sin definir";
+  };
+
   Object.entries(prefills).forEach(([key, value]) => {
     if (value && fields[key]) {
       fields[key].value = value;
     }
   });
 
-  const updateSummary = () => {
-    const selectedPlan = fields.plan.value || "Sin definir";
-    const selectedRubro = fields.rubro.value || "Sin definir";
-    const selectedDemo = fields.demo.value || "Sin definir";
-    const meta = planMeta[selectedPlan] || { price: "A definir", time: "A definir" };
+  [fields.plan, fields.rubro].forEach((field) => enhanceSelect(field));
 
-    summaryPlan.textContent = selectedPlan;
-    summaryRubro.textContent = selectedRubro;
-    summaryDemo.textContent = selectedDemo;
+  const updateSummary = () => {
+    const selectedPlanValue = fields.plan.value || "";
+    const meta = planMeta[selectedPlanValue] || { price: "A definir", time: "A definir" };
+
+    summaryPlan.textContent = getFieldText(fields.plan);
+    summaryRubro.textContent = getFieldText(fields.rubro);
+    summaryDemo.textContent = getFieldText(fields.demo);
     summaryPrice.textContent = meta.price;
     summaryTime.textContent = meta.time;
   };
 
   [fields.plan, fields.rubro, fields.demo].forEach((field) => {
     field?.addEventListener("change", updateSummary);
+    field?.addEventListener("input", updateSummary);
   });
 
   updateSummary();
@@ -186,17 +306,17 @@ if (orderForm) {
 
     const messageLines = [
       "Hola, quiero pedir una página web.",
-      `Plan: ${fields.plan.value || "Sin definir"}`,
-      `Rubro: ${fields.rubro.value || "Sin definir"}`,
-      `Demo elegida: ${fields.demo.value || "Sin definir"}`,
-      `Negocio: ${fields.businessName.value || "Sin definir"}`,
-      `Ciudad: ${fields.city.value || "Sin definir"}`,
-      `Nombre de contacto: ${fields.contactName.value || "Sin definir"}`,
-      `WhatsApp: ${fields.whatsapp.value || "Sin definir"}`,
-      `Servicios: ${fields.services.value || "Sin definir"}`,
-      `Colores o estilo: ${fields.colors.value || "Sin definir"}`,
-      `Referencias: ${fields.references.value || "Sin definir"}`,
-      `Extras de interés: ${fields.extras.value || "Sin definir"}`,
+      `Plan: ${getFieldText(fields.plan)}`,
+      `Rubro: ${getFieldText(fields.rubro)}`,
+      `Demo elegida: ${getFieldText(fields.demo)}`,
+      `Negocio: ${getFieldText(fields.businessName)}`,
+      `Ciudad: ${getFieldText(fields.city)}`,
+      `Nombre de contacto: ${getFieldText(fields.contactName)}`,
+      `WhatsApp: ${getFieldText(fields.whatsapp)}`,
+      `Servicios: ${getFieldText(fields.services)}`,
+      `Colores o estilo: ${getFieldText(fields.colors)}`,
+      `Referencias: ${getFieldText(fields.references)}`,
+      `Extras de interés: ${getFieldText(fields.extras)}`,
     ];
 
     const whatsappUrl = `https://wa.me/543517714398?text=${encodeURIComponent(messageLines.join("\n"))}`;
