@@ -1883,7 +1883,7 @@ h3,
 
 .brand-logo {
   display: block;
-  width: min(170px, 15vw);
+  width: min(250px, 22vw);
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.24));
@@ -1891,12 +1891,12 @@ h3,
 
 @media (max-width: 960px) {
   .brand-logo {
-    width: min(150px, 24vw);
+    width: min(210px, 30vw);
   }
 }
 
 @media (max-width: 760px) {
   .brand-logo {
-    width: min(138px, 34vw);
+    width: min(180px, 44vw);
   }
 }
