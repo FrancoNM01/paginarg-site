@@ -4,10 +4,10 @@
   --ink: #121212;
   --muted: #626262;
   --line: rgba(18, 18, 18, 0.12);
-  --line-strong: rgba(18, 18, 18, 0.22);
-  --accent: #3f4a56;
-  --accent-strong: #111111;
-  --accent-soft: rgba(17, 17, 17, 0.08);
+  --line-strong: rgba(214, 166, 45, 0.26);
+  --accent: #d6a62d;
+  --accent-strong: #c7921f;
+  --accent-soft: rgba(214, 166, 45, 0.14);
   --surface: rgba(255, 255, 255, 0.92);
   --surface-dark: #0d0d0d;
   --radius-lg: 26px;

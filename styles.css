@@ -7,9 +7,9 @@
   --muted: #c3b59e;
   --line: rgba(255, 255, 255, 0.16);
   --card: linear-gradient(180deg, rgba(23, 23, 23, 0.94), rgba(12, 12, 12, 0.96));
-  --gold: #ffffff;
-  --gold-strong: #ffffff;
-  --gold-soft: rgba(255, 255, 255, 0.12);
+  --gold: #d6a62d;
+  --gold-strong: #f5d46b;
+  --gold-soft: rgba(214, 166, 45, 0.16);
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
   --radius-lg: 28px;
   --radius-md: 18px;
@@ -145,10 +145,10 @@ h3 {
 
 .button-primary:hover,
 .nav-cta:hover {
-  background: linear-gradient(135deg, #ffffff, #d8d8d8);
+  background: linear-gradient(135deg, #f5d46b, #c7921f);
   color: #090909;
   border-color: transparent;
-  box-shadow: 0 16px 32px rgba(255, 255, 255, 0.14);
+  box-shadow: 0 16px 32px rgba(214, 166, 45, 0.24);
 }
 
 .button-secondary {
@@ -158,10 +158,10 @@ h3 {
 }
 
 .button-secondary:hover {
-  background: linear-gradient(135deg, #ffffff, #d8d8d8);
+  background: linear-gradient(135deg, #f5d46b, #c7921f);
   color: #090909;
   border-color: transparent;
-  box-shadow: 0 16px 32px rgba(255, 255, 255, 0.14);
+  box-shadow: 0 16px 32px rgba(214, 166, 45, 0.24);
 }
 
 .plan-button {
@@ -171,10 +171,10 @@ h3 {
 }
 
 .plan-button:hover {
-  background: linear-gradient(135deg, #ffffff, #d8d8d8);
+  background: linear-gradient(135deg, #f5d46b, #c7921f);
   color: #090909;
   border-color: transparent;
-  box-shadow: 0 16px 32px rgba(255, 255, 255, 0.14);
+  box-shadow: 0 16px 32px rgba(214, 166, 45, 0.24);
 }
 
 .button:hover,
@@ -425,7 +425,7 @@ h3 {
 .faq-card:hover,
 .order-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(245, 212, 107, 0.34);
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.48);
 }
 
@@ -443,9 +443,9 @@ h3 {
 }
 
 .filter.active {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.07));
+  background: linear-gradient(135deg, rgba(245, 212, 107, 0.22), rgba(214, 166, 45, 0.1));
   color: var(--gold-strong);
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(245, 212, 107, 0.34);
 }
 
 .demo-plan,
@@ -696,7 +696,7 @@ h3 {
 
 .custom-select-trigger:focus-visible {
   outline: none;
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(245, 212, 107, 0.34);
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
 }
 
@@ -1180,8 +1180,8 @@ h3 {
 .catalog-reset:hover,
 .catalog-reset:focus-visible,
 .rubro-card .chip.active {
-  border-color: rgba(255, 255, 255, 0.32);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.08));
+  border-color: rgba(245, 212, 107, 0.36);
+  background: linear-gradient(135deg, rgba(245, 212, 107, 0.2), rgba(214, 166, 45, 0.1));
   color: var(--gold-strong);
 }
 
@@ -1486,7 +1486,7 @@ h3 {
   padding: 0.45rem 0.8rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(0, 0, 0, 0.26);
+  background: rgba(50, 36, 8, 0.34);
   backdrop-filter: blur(12px);
   font-size: 0.76rem;
   font-weight: 800;
@@ -1528,15 +1528,15 @@ h3 {
   height: 12px;
   padding: 0;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(245, 212, 107, 0.34);
+  background: rgba(214, 166, 45, 0.24);
   cursor: pointer;
   transition: transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
 }
 
 .hero-dot.is-active {
-  background: #ffffff;
-  border-color: #ffffff;
+  background: #f5d46b;
+  border-color: #f5d46b;
   transform: scale(1.1);
 }
 
@@ -1886,7 +1886,7 @@ h3,
   width: min(250px, 22vw);
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.24));
+  filter: drop-shadow(0 6px 18px rgba(214, 166, 45, 0.18));
 }
 
 @media (max-width: 960px) {
