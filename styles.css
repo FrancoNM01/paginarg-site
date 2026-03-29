@@ -1883,13 +1883,14 @@ h3,
 
 .brand-logo {
   display: block;
-  height: 56px;
+  height: 62px;
   width: auto;
   object-fit: contain;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.28));
 }
 
 @media (max-width: 760px) {
   .brand-logo {
-    height: 46px;
+    height: 50px;
   }
 }
