@@ -226,6 +226,59 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+const heroCarousel = document.querySelector("[data-hero-carousel]");
+
+if (heroCarousel) {
+  const slides = Array.from(heroCarousel.querySelectorAll("[data-hero-slide]"));
+  const dots = Array.from(heroCarousel.querySelectorAll("[data-hero-dot]"));
+  let activeIndex = slides.findIndex((slide) => slide.classList.contains("is-active"));
+  let autoRotateId = null;
+
+  if (activeIndex < 0) {
+    activeIndex = 0;
+  }
+
+  const setActiveSlide = (index) => {
+    activeIndex = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, slideIndex) => {
+      slide.classList.toggle("is-active", slideIndex === activeIndex);
+    });
+
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle("is-active", dotIndex === activeIndex);
+      dot.setAttribute("aria-pressed", String(dotIndex === activeIndex));
+    });
+  };
+
+  const restartAutoRotate = () => {
+    if (autoRotateId) {
+      window.clearInterval(autoRotateId);
+    }
+
+    autoRotateId = window.setInterval(() => {
+      setActiveSlide(activeIndex + 1);
+    }, 5200);
+  };
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      setActiveSlide(Number(dot.dataset.heroDot || 0));
+      restartAutoRotate();
+    });
+  });
+
+  heroCarousel.addEventListener("mouseenter", () => {
+    if (autoRotateId) {
+      window.clearInterval(autoRotateId);
+    }
+  });
+
+  heroCarousel.addEventListener("mouseleave", restartAutoRotate);
+
+  setActiveSlide(activeIndex);
+  restartAutoRotate();
+}
 const orderForm = document.getElementById("orderForm");
 
 if (orderForm) {
