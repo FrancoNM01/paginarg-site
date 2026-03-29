@@ -233,6 +233,7 @@ if (heroCarousel) {
   const dots = Array.from(heroCarousel.querySelectorAll("[data-hero-dot]"));
   let activeIndex = slides.findIndex((slide) => slide.classList.contains("is-active"));
   let autoRotateId = null;
+  const rotationDelay = 4200;
 
   if (activeIndex < 0) {
     activeIndex = 0;
@@ -251,14 +252,23 @@ if (heroCarousel) {
     });
   };
 
-  const restartAutoRotate = () => {
+  const stopAutoRotate = () => {
     if (autoRotateId) {
       window.clearInterval(autoRotateId);
+      autoRotateId = null;
+    }
+  };
+
+  const restartAutoRotate = () => {
+    stopAutoRotate();
+
+    if (slides.length <= 1 || document.hidden) {
+      return;
     }
 
     autoRotateId = window.setInterval(() => {
       setActiveSlide(activeIndex + 1);
-    }, 5200);
+    }, rotationDelay);
   };
 
   dots.forEach((dot) => {
@@ -268,18 +278,22 @@ if (heroCarousel) {
     });
   });
 
-  heroCarousel.addEventListener("mouseenter", () => {
-    if (autoRotateId) {
-      window.clearInterval(autoRotateId);
+  heroCarousel.addEventListener("mouseenter", stopAutoRotate);
+  heroCarousel.addEventListener("mouseleave", restartAutoRotate);
+  heroCarousel.addEventListener("focusin", stopAutoRotate);
+  heroCarousel.addEventListener("focusout", restartAutoRotate);
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      stopAutoRotate();
+    } else {
+      restartAutoRotate();
     }
   });
 
-  heroCarousel.addEventListener("mouseleave", restartAutoRotate);
-
   setActiveSlide(activeIndex);
   restartAutoRotate();
-}
-const orderForm = document.getElementById("orderForm");
+}const orderForm = document.getElementById("orderForm");
 
 if (orderForm) {
   const params = new URLSearchParams(window.location.search);
