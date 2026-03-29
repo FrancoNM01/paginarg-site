@@ -1721,3 +1721,44 @@ h3 {
     align-items: center;
   }
 }
+/* Typography refinement */
+.brand,
+h1,
+h2,
+h3,
+.woo-copy h2,
+.woo-panel h3 {
+  font-family: "Fraunces", serif;
+}
+
+.hero-copy {
+  max-width: 1120px;
+}
+
+.hero-copy h1 {
+  max-width: 14ch;
+  font-family: "Fraunces", serif;
+  font-size: clamp(2.9rem, 5.2vw, 5rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+}
+
+.hero-text {
+  max-width: 720px;
+}
+
+@media (max-width: 1080px) {
+  .hero-copy h1 {
+    max-width: 13ch;
+    font-size: clamp(2.7rem, 6vw, 4.3rem);
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-copy h1 {
+    font-size: clamp(2.1rem, 9vw, 3.15rem);
+    line-height: 1;
+    letter-spacing: -0.025em;
+  }
+}
