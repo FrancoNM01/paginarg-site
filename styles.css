@@ -1873,3 +1873,23 @@ h3,
     min-height: 430px;
   }
 }
+
+/* Brand logo */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.brand-logo {
+  display: block;
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .brand-logo {
+    height: 46px;
+  }
+}
